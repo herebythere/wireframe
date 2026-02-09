@@ -1,0 +1,134 @@
+:root {
+	color-scheme: light dark;
+
+	/* debug */
+	--baseline-grid-color: light-dark(#cfcfcf, #787878);
+
+	/* Root */
+	--background: light-dark(#f9f9f9, #17181A);
+	--background_inverted: light-dark(#17181A, #efefef);
+
+	/* animation tempo */
+	--transition-time: 250ms;
+
+	/* Typography */
+	--line-height: 2rem;
+	--font-family: "SF Pro", "San Francisco", "Roboto Flex", "Segoe UI Variable", Helvetica, sans-serif;
+	--color: light-dark(#3e3e3e, #f9f9f9);
+	--color_inverted: light-dark(#f9f9f9, #3e3e3e);
+	--font: 400 1rem/var(--line-height) var(--font-family);
+	--h1_font: 700 8rem/8rem var(--font-family);
+	--h1_color: var(--color);
+	--h2_font: 700 6rem/6rem var(--font-family);
+	--h2_color: var(--color);
+	--h3_font: 700 4rem/4rem var(--font-family);
+	--h3_color: var(--color);
+	--h4_font: 700 3rem/3rem var(--font-family);
+	--h4_color: var(--color);
+	--h5_font: 700 2rem/2rem var(--font-family);
+	--h5_color: var(--color);
+	--h6_font: 700 1.5rem/2rem var(--font-family);
+	--h6_color: var(--color);
+	
+	/* Focus & Selection */
+	--selection_background-color: light-dark(cornflowerblue, cornflowerblue);
+	--selection_color: light-dark(white, black);
+
+	--outline: 4px solid transparent;
+	--outline-offset: 8px;
+	--outline_hover: 4px solid hsl(205, 79%, 66%);
+	--outline-offset_hover: 8px;
+	--outline_focus: 4px solid var(--selection_background-color);
+	--outline-offset_focus: 8px;
+	--outline_active: 4px solid var(--selection_background-color);
+	--outline-offset_active: 0px;
+
+	/* Press actions */
+	--press_background: var(--background);
+	--press_color: transparent;
+	--press_border-width: 2px;
+	--press_border: var(--press_border-width) solid light-dark(black, white);
+	--press_border-radius: 0.5lh;
+
+	--press_font: 400 0.9rem/1rem var(--font-family);
+	--press_box-shadow: none;
+
+	--press_content_checked: '\2714';
+	--press_content_indeterminate: '\2014';
+	
+
+	--press_background_hover: var(--background);
+	--press_color_hover: var(--color);
+	--press_border_hover: var(--press_border);
+	--press_box-shadow_hover: none;
+
+	--press_background_active: var(--background);
+	--press_color_active: var(--color);
+	--press_border_active: var(--press_border-width) solid light-dark(black, white);
+	--press_box-shadow_active: none;
+
+	--press_background_checked: light-dark(black, white);
+	--press_color_checked: var(--color);
+	--press_border_checked: var(--press_border-width) solid light-dark(black, white);
+	--press_box-shadow_checked: none;
+
+	--press_background_diabled: light-dark(black, white);
+	--press_color_disabled: var(--color);
+	--press_border_disabled: var(--press_border-width) solid light-dark(black, white);
+	--press_box-shadow_disabled: none;
+
+	/* submit button */
+
+	/* Checkbox */
+	--checkbox_block-size: 1.25rem;
+	--checkbox_color: transparent;
+
+	/* Radio */
+	--radio-island_block-size: 1rem;
+	--radio-island_background: black;
+	--radio-island_color: white;
+	--radio-island_content: '';
+	--radio-island_border: var(--press_border);
+	--radio-island_box-shadow: var(var(--press_box-shadow));
+
+	/* -webkit-text-stroke */
+	/* text-shadow */
+
+
+	/* Buttons */
+	--button_font: 700 0.9rem/0.9rem var(--font-family);
+	--button_color: var(--color);
+	--button_background: transparent;
+	--button_padding-block: 0.75rem;
+
+	--button_bg_checked: light-dark(black, white);
+	--button_color_checked: light-dark(white, black);
+	/* --button_border-radius: calc(var(--button_padding-block) * 2 + var(--line-height)); */
+
+	--button_padding-inline: 1rem;
+
+	/* Text inputs */
+	--text-input_font: 400 1rem/var(--line-height) var(--font-family)
+	--text-input_background: light-dark(white, black);
+	--text-input_border: 2px solid light-dark(black, white);
+
+	--text-input_border-bottom: 2px solid light-dark(black, white);
+	--text-input_padding-inline: 0.5rem;
+	--text-input_padding-block: 0.25rem;
+	--text-input_border-radius: 1px;
+	--text-input_border-radius-bottom: 1px;
+
+
+	/* Number inputs */
+	--number-input_font: 400 1rem/var(--line-height) var(--font-family)
+	--number-input_background: light-dark(white, black);
+	--number-input_border: 2px solid light-dark(black, white);
+	--number-input_border-bottom: 2px solid light-dark(black, white);
+	--number-input_padding-inline: 0.5rem;
+	--number-input_padding-block: 0.25rem;
+	--number-input_border-radius: 1px;
+	--number-input_border-radius-bottom: 1px;
+
+	/* Select */
+
+}

@@ -1,0 +1,28 @@
+::-webkit-calendar-picker-indicator {
+	/* background-color: white; */
+	border-radius: 4px;
+}
+
+/* slider */
+::-webkit-slider-thumb {}
+::-webkit-slider-runnable-track {}
+
+/* progress bar */
+::-webkit-progress-bar {}
+::-webkit-progress-inner-element {}
+::-webkit-progress-value {}
+
+/* meter */
+::-webkit-meter-bar {}
+::-webkit-meter-inner-element{}
+
+::-webkit-color-swatch-wrapper{
+	padding: 0;
+}
+
+::-webkit-color-swatch {
+	border-radius: var(--press_border-radius);
+}
+::-webkit-datetime-edit {
+	color: var(--color);
+}

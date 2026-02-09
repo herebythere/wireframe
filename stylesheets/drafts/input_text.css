@@ -1,0 +1,38 @@
+/* places for fonts and line heights */
+:is(input[type=text], input[type=password], input[type=email], input[type=url]) {
+	appearance: none;
+	position: relative;
+	display:inline-flex;
+	cursor: initial;
+
+	transition: all var(--transition-time);
+
+	font: var(--text-input_font);
+	color: var(--color);
+	background: var(--text-input_background);
+	border: var(--text-input_border);
+	border-radius: var(--text-input_border-radius);
+	border-end-start-radius: var(--text-input_border-radius-bottom);
+	border-end-end-radius: var(--text-input_border-radius-bottom);
+	border-inline-start: var(--text-input_border);
+	border-block-end: var(--text-input_border);
+	padding-inline: var(--text-input_padding-inline);
+	padding-block: var(--text-input_padding-block);
+
+	&:hover {
+		/* border: var(--text-input_border_hover); */
+		/* border-block-end: var(--text-input_border_hover); */
+	}
+
+	&:active {
+		/* border: var(--text-input_border_active); */
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+
+		background: var(--text-input_background_disabled);
+		border: var(--text-input_border_disabled);
+		opacity: var(--text-input_opacity_disabled);	
+	}
+}

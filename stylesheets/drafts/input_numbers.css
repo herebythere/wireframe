@@ -1,0 +1,41 @@
+:is(input[type=time], input[type=date], input[type=datetime-local], input[type=number], input[type=phone]) {
+	appearance: none;
+	position: relative;
+	display:inline-flex;
+	cursor: initial;
+
+	font: var(--number-input_font);
+	background: var(--number-input_background);
+	border: var(--number-input_border);
+	border-radius: var(--number-input_border-radius);
+	border-end-start-radius: var(--number-input_border-radius-bottom);
+	border-end-end-radius: var(--number-input_border-radius-bottom);
+	border-inline-start: var(--number-input_border);
+	border-block-end: var(--number-input_border);
+	padding-inline: var(--number-input_padding-inline);
+	padding-block: var(--number-input_padding-block);
+	color: var(--color);
+	transition: all var(--transition-time);
+
+	&:hover {
+		border: var(--number-input_border_hover, var(--number-input_border));
+		border-block-end: var(--number-input_border_hover, var(--number-input_border));
+		box-shadow: var(--number-input_box-shadow_hover, var(--number-input_box-shadow));
+	}
+
+	&:focus {}
+
+	&:active {
+		border: var(--number-input_border_active, var(--number-input_border));
+		box-shadow: var(--number-input_box-shadow_active, var(--number-input_box-shadow));
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+
+		background: var(--number-input_background_disabled, var(--number-input_background));
+		border: var(--number-input_border_disabled, var(--number-input_border));
+		box-shadow: var(--number-input_box-shadow_disabled, var(--number-input_box-shadow));
+		opacity: var(--number-input_opacity_disabled, var(--number-input_opacity));		
+	}
+}

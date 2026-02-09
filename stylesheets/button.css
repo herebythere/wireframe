@@ -1,0 +1,38 @@
+:is(button, input[type=button]) {
+	appearance: none;
+	cursor: pointer;
+	display: inline-flex;
+	position: relative;
+
+	background: var(--press_background);
+	border-radius: var(--press_border-radius);
+	border: var(--press_border);
+	color: var(--button_color);
+	font: var(--button_font);
+	padding-block: var(--button_padding-block);
+	padding-inline: var(--button_padding-inline);
+	transition: var(--press_transition-time);
+
+	@media (hover: hover) {
+		&:hover {
+			background: var(--press_background_hover);
+			border: var(--press_border_hover);
+			color: var(--press_color_hover);
+		}
+	}
+
+	&:active {
+		background: var(--press_background_active);
+		border: var(--press_border_active);
+		color: var(--press_color_active);
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+
+		background: var(--press_background_disabled);
+		border: var(--press_border_disabled);
+		color: var(--press_color_disabled);
+		opacity: var(--press_opacity_disabled);
+	}
+}
