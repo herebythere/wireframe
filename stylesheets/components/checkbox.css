@@ -24,7 +24,7 @@
 	}
 
 	&:checked {
-		color: var(--press_color_checked);
+		color: var(--press_content_indeterminate);
 
 		&:hover {
 			color: var(--press_color_hover);
