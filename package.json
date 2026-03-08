@@ -1,4 +1,16 @@
 {
 	"name": "@herebythere/wireframe",
-	"type": "module"
+	"type": "module",
+	"scripts": {
+		"build": "npm run build:bundle",
+		"bundle": "npm run css:bundle",
+		"build:bundle": "npx tsc --project ./bundle/",
+		"css:bundle": "node bundle/dist/mod.js ./stylesheets/mod.css ./dist/wireframe.css"
+	},
+	"devDependencies": {
+		"@types/node": "^25.3.5",
+		"lightningcss": "^1.31.1",
+		"prettier": "^3.8.1",
+		"typescript": "^5.9.3"
+	}
 }

@@ -20,12 +20,10 @@
 	/* radio island */
 	&::before {
 		content: '';
-		/* --radio-island-size */
 		display: block;
 		inline-size: 0.6rem;
 		block-size: 0.6rem;
 		border-radius: 0.3rem;
-		/* radio island background */
 		background: none;
 
 		transition: all var(--transition-time);

@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"lib": ["ESNext", "DOM"],
+		"module": "nodenext",
+		"target": "esnext",
+		"strict": true,
+		"declaration": true,
+		"removeComments": true
+	}
+}
