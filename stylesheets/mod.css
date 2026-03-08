@@ -1,4 +1,6 @@
-@import "./button.css";
-@import "./checkbox.css";
-@import "./radio.css";
-@import "./switch.css";
+@import "./components/button.css";
+@import "./components/checkbox.css";
+@import "./components/radio.css";
+@import "./components/switch.css";
+@import "./components/text_input.css";
+@import "./components/textarea.css";

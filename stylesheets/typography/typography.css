@@ -1,0 +1,39 @@
+:root {
+	font: var(--font);
+	color: var(--color);
+}
+
+h1 {
+	font: var(--h1_font);
+	color: var(--h1_color);
+}
+
+h2 {
+	font: var(--h2_font);
+	color: var(--h2_color);
+}
+
+h3 {
+	font: var(--h3_font);
+	color: var(--h3_color);
+}
+
+h4 {
+	font: var(--h4_font);
+	color: var(--h4_color);
+}
+
+h5 {
+	font: var(--h5_font);
+	color: var(--h5_color);
+}
+
+h6 {
+	font: var(--h6_font);
+	color: var(--h6_color);
+}
+
+::selection {
+	background-color: var(--selection_background-color);
+	color: var(--selection_color);
+}
