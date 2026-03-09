@@ -19,7 +19,10 @@
 	padding-inline: var(--text-input_padding-inline);
 	padding-block: var(--text-input_padding-block);
 
-
+	&:focus {
+		outline: none;
+	}
+	
 	&:disabled {
 		cursor: not-allowed;
 

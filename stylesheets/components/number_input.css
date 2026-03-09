@@ -17,9 +17,8 @@ input[type=time], input[type=date], input[type=datetime-local], input[type=numbe
 	color: var(--color);
 	transition: all var(--transition-time);
 
-	&:active {
-		border: var(--number-input_border_active, var(--number-input_border));
-		box-shadow: var(--number-input_box-shadow_active, var(--number-input_box-shadow));
+	&:focus {
+		outline: none;
 	}
 
 	&:disabled {
