@@ -1,0 +1,29 @@
+/* places for fonts and line heights */
+textarea {
+	appearance: none;
+	background: var(--text-input_background);
+	font: var(--text-input_font);
+	cursor: initial;
+	min-inline-size: 225px;
+	min-block-size: calc(var(--line-height) * 2);
+
+	border: var(--text-input_border);
+	border-inline-start: var(--text-input_border-bottom, var(--text-input_border));
+	border-block-end: var(--text-input_border-bottom, var(--text-input_border));
+
+	field-sizing: content;
+
+	transition: all var(--transition-time);
+
+	&:disabled {
+		cursor: not-allowed;
+
+		background: var(--text-input_background_disabled, var(--text-input_background));
+		border: var(--text-input_border_disabled, var(--text-input_border));
+		box-shadow: var(--text-input_box-shadow_disabled, var(--text-input_box-shadow));
+		opacity: var(--text-input_opacity_disabled, var(--text-input_opacity));
+
+		outline: var(--outline);
+		outline-offset: var(--outline-offset);		
+	}
+}

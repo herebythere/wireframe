@@ -1,0 +1,53 @@
+.outline {
+    outline: var(--outline);
+	outline-offset: var(--outline-offset);
+
+	@media (hover: hover) {
+		&:hover {
+			outline: var(--outline_hover);
+			outline-offset: var(--outline-offset_hover);
+		}
+		
+		&:active {
+			outline: var(--outline_active);
+			outline-offset: var(--outline-offset_active);
+		}
+	}
+
+	&:focus {
+		outline: var(--outline_focus);
+		outline-offset: var(--outline-offset_focus);
+	}
+
+	&:disabled {
+		outline: var(--outline);
+		outline-offset: var(--outline-offset);		
+	}
+}
+
+.text-outline {
+    outline: var(--outline);
+	outline-offset: var(--outline-offset);
+
+	@media (hover: hover) {
+		&:hover {
+			outline: var(--outline_hover);
+			outline-offset: var(--outline-offset_hover);
+		}
+	}
+
+	&:focus {
+		outline: var(--outline_focus);
+		outline-offset: var(--outline-offset_focus);
+	}
+
+	/* &:active {
+		outline: var(--outline_active, var(--outline_focus));
+		outline-offset: var(--outline-offset_active, var(--outline-offset_focus));
+	} */
+
+	&:disabled {
+		outline: var(--outline);
+		outline-offset: var(--outline-offset);		
+	}
+}

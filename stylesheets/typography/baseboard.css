@@ -1,0 +1,63 @@
+blockquote,
+button,
+dialog,
+fieldset,
+input,
+menu,
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+body,
+dd,
+dl,
+figure,
+h1,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+	margin: 0;
+}
+
+legend,
+td,
+textarea,
+th,
+select,
+option {
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+iframe,
+fieldset {
+	border: none;
+}
+
+th,
+caption {
+	text-align: start;
+}
+
+ol,
+ul,
+menu,
+dir,
+summary {
+	list-style-type: none;
+}
+
+body {
+	min-block-size: 100dvh;
+}
