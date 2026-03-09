@@ -1,23 +1,45 @@
 # Wireframe
 
-A UI component set for the web
+A UI component set for the web.
 
 ## CSS only components
 
-The following components are included in a single css file:
+You want a react / vue / web component for a button??
+
+No you do not. That's crazy dude.
+
+You WANT css only components. You NEED css only components.
+
+There is so much benefit to CSS only solutions. The browser does
+SO MUCH for ARIA and mobile. Recreating these primitves like a checkbox
+is almost an excercise in futility.
+
+A single css stylesheet includes the following components:
 - button
 - checkbox
 - radio
-- switch / toggle
+- switch
+- text inputs
+	- text
+	- password
+	- email
+	- url
+- number inputs
+	- number
+	- phone
+	- time
+	- date
+	- datetime-local
+- textarea
 
-- range (apparently works with ::-webkit ::-moz)
-- modal / popover stuff
-- progress bar (apparently works with ::-webkit ::-moz)
-
-- variants data-button-primary data-button
-
-Polite future components
-`<selectitem>`
+TODO
+- alert
+- dialog
+- disclosure
+- link
+- meter
+- slider
+- table
 
 ## Typography
 
@@ -37,6 +59,8 @@ So a visual correlation does not make sense here.
 ## Web components
 
 Components that require some extra help.
+
+TODO:
 - password (with visible / stars)
 - tabs
 - nested checkboxes
@@ -45,4 +69,37 @@ Components that require some extra help.
 - knobs
 - gamepad? but like why?
 - press indicators (circle -> big circle)
+
+# WARIA
+
+- Accordian
+- Alert (vanilla CSS)
+- Alert and Message Dialogs
+- Breadcrumb
+- ~~Button~~ (vanilla CSS)
+- Carousel
+- ~~Checkbox~~ (vanilla CSS)
+- Combobox
+- Dialog (modal) (vanilla CSS)
+- Disclosure (vanilla CSS)
+- Feed
+- Grid (empty web component)
+- Landmarks
+- Link (vanilla CSS)
+- Listbox
+- Menu and Menubar
+- Menu Button
+- Meter (vanilla CSS)
+- ~~Radio Group~~ (vanilla CSS)
+- Slider (vanilla CSS)
+- Slider (multi-thumb)
+- Spinbutton
+- ~~Switch~~ (vanilla CSS)
+- Table (vanilla CSS)
+- Tabs  (empty web component)
+- Toolbar (empty web component)
+- Tooltip
+- Tree View
+- Treegrid
+- Window Splitter
 

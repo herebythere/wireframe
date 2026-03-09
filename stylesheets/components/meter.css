@@ -1,0 +1,26 @@
+:is(progress) {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background: transparent;
+	margin: 0;
+	color: #efefef;
+	border: 2px solid #efefef;
+	height: 16px;
+	cursor: pointer;
+}
+
+
+progress::-moz-progress-bar {
+	background-color: #efefef;
+}
+
+progress::-webkit-progress-bar {
+	background: none;
+}
+
+progress::-webkit-progress-value {
+	background-color: #efefef;
+}
+

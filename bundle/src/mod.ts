@@ -13,24 +13,12 @@ let cwd = process.cwd();
 let originCssPath = path.join(cwd, originCssPathInput);
 let targetCssPath = path.join(cwd, targetCssPathInput);
 
-console.log(originCssPath);
-console.log(targetCssPath);
-
-
 let { code, map } = bundle({
   filename: originCssPath,
-//   minify: true
 });
-
-
-// console.log(import.meta.url);
-let cssText = new TextDecoder().decode(code);
-console.log(cssText);
-
 
 try {
   fs.writeFileSync(targetCssPath, code);
-  // file written successfully
 } catch (err) {
   console.error(err);
 }
