@@ -31,6 +31,8 @@ A single css stylesheet includes the following components:
 	- date
 	- datetime-local
 - textarea
+- slider
+- progress
 
 TODO
 - alert
@@ -38,7 +40,6 @@ TODO
 - disclosure
 - link
 - meter
-- slider
 - table
 
 ## Typography

@@ -1,10 +1,11 @@
-:is(input[type=range]) {
+input[type=range] {
 	-webkit-appearance: none;
 	appearance: none;
 	background: transparent;
 	margin: 0;
 	border: 2px solid #efefef;
-	height: 16px;
+	block-size: 16px;
+	/* writing-mode: vertical-lr; */
 }
 
 input[type=range]::-ms-track {
@@ -22,7 +23,7 @@ input[type=range]::-webkit-slider-thumb {
 	width: 16px;
 	top: 7px;
 	cursor: pointer;
-	margin-top: -14px;
+	margin-block-start: -14px;
 	background: none;
 	/* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 }

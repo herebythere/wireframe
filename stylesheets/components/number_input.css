@@ -1,4 +1,4 @@
-:is(input[type=time], input[type=date], input[type=datetime-local], input[type=number], input[type=phone]) {
+input[type=time], input[type=date], input[type=datetime-local], input[type=number], input[type=phone] {
 	appearance: none;
 	position: relative;
 	display:inline-flex;
@@ -16,14 +16,6 @@
 	padding-block: var(--number-input_padding-block);
 	color: var(--color);
 	transition: all var(--transition-time);
-
-	&:hover {
-		border: var(--number-input_border_hover, var(--number-input_border));
-		border-block-end: var(--number-input_border_hover, var(--number-input_border));
-		box-shadow: var(--number-input_box-shadow_hover, var(--number-input_box-shadow));
-	}
-
-	&:focus {}
 
 	&:active {
 		border: var(--number-input_border_active, var(--number-input_border));

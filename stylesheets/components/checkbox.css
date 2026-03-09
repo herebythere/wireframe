@@ -1,4 +1,4 @@
-:is(input[type=checkbox]) {
+input[type=checkbox] {
 	appearance: none;
 	position: relative;
 	display: inline-flex;

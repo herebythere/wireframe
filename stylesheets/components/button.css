@@ -1,4 +1,4 @@
-:is(button, input[type=button]) {
+button, input[type=button] {
 	appearance: none;
 	cursor: pointer;
 	display: inline-flex;

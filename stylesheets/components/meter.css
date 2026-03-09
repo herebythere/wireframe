@@ -1,4 +1,4 @@
-:is(progress) {
+meter {
 	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -12,15 +12,8 @@
 }
 
 
-progress::-moz-progress-bar {
-	background-color: #efefef;
-}
-
-progress::-webkit-progress-bar {
-	background: none;
-}
-
-progress::-webkit-progress-value {
-	background-color: #efefef;
-}
-
+meter::-webkit-meter-bar {}
+meter::-webkit-meter-optimum-value {}
+meter::-webkit-meter-suboptimum-value {}
+meter::-webkit-meter-even-less-good-value {}
+meter::-webkit-meter-inner-element {}
