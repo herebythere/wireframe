@@ -1,4 +1,4 @@
-button, input[type=button] {
+button[data-wf], input[type=button][data-wf] {
 	appearance: none;
 	cursor: pointer;
 	display: inline-flex;

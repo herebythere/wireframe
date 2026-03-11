@@ -3,43 +3,43 @@
 	--baseline_line-height-4x: calc(var(--line-height) * 4);
 }
 
-h1 {
+[data-wf-h1] {
 	line-height: var(--baseline_line-height-4x);
 	padding-block-start: calc((1lh - 1cap) * 0.5);
 	margin-block-end: calc((1lh - 1cap) * -0.5);
 }
 
-h2 {
+[data-wf-h2] {
 	line-height: var(--baseline_line-height-4x);
 	padding-block-start: calc((1lh - 1cap) * 0.5);
 	margin-block-end: calc((1lh - 1cap) * -0.5);
 }
 
-h3 {
+[data-wf-h3] {
 	line-height: var(--baseline_line-height-2x);
 	padding-block-start: calc((1lh - 1cap) * 0.5);
 	margin-block-end: calc((1lh - 1cap) * -0.5);
 }
 
-h4 {
+[data-wf-h4] {
 	line-height: var(--baseline_line-height-2x);
 	padding-block-start: calc((1lh - 1cap) * 0.5);
 	margin-block-end: calc((1lh - 1cap) * -0.5);
 }
 
-h5 {
+[data-wf-h5] {
 	line-height: var(--line-height);
 	padding-block-start: calc((1lh - 1cap) * 0.5);
 	margin-block-end: calc((1lh - 1cap) * -0.5);
 }
 
-h6 {
+[data-wf-h6] {
 	line-height: var(--line-height);
 	padding-block-start: calc((1lh - 1cap) * 0.5);
 	margin-block-end: calc((1lh - 1cap) * -0.5);
 }
 
-p {
+[data-wf-p] {
 	line-height: var(--line-height);
 	padding-block-start: calc((1lh - 1cap) * 0.5);
 	margin-block-end: calc((1lh - 1cap) * -0.5);
