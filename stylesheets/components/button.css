@@ -7,25 +7,25 @@ button[data-wf], input[type=button][data-wf] {
 	background: var(--press_background);
 	border-radius: var(--press_border-radius);
 	border: var(--press_border);
-	color: var(--button_color);
-	font: var(--button_font);
+	color: var(--press_color);
+	font: var(--press_font);
 	padding-block: var(--button_padding-block);
 	padding-inline: var(--button_padding-inline);
 	transition: var(--press_transition-time);
 
-	@media (hover: hover) {
+	/* @media (hover: hover) {
 		&:hover {
 			background: var(--press_background_hover);
 			border: var(--press_border_hover);
 			color: var(--press_color_hover);
 		}
-	}
+	} */
 
-	&:active {
+	/* &:active {
 		background: var(--press_background_active);
 		border: var(--press_border_active);
 		color: var(--press_color_active);
-	}
+	} */
 
 	&:disabled {
 		cursor: not-allowed;

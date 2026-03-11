@@ -8,7 +8,7 @@
 export const template = `
 	<style></style>
 	<slot></slot>
-`
+`;
 
 let templateEl = document.createElement("template");
 templateEl.setHTMLUnsafe(template);
@@ -61,8 +61,9 @@ export class InlineMovement extends HTMLElement {
 			for (let el of this.#slot?.assignedElements() ?? []) {
 				el.matches(selector);
 				if (!el.hasAttribute("tabindex"))
-					el.setAttribute("tabindex", "0");
+					el.setAttribute("tabindex", "-1");
 			}
+
 		}
 	}
 
