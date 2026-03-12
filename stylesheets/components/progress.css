@@ -5,7 +5,7 @@ progress {
   color: none;
   background: none;
   border: 2px solid #efefef;
-  height: 16px;
+  height: var(--line-height);
   margin: 0;
 }
 

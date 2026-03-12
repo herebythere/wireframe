@@ -5,7 +5,6 @@ TODO:
 - dialog
 - disclosure
 - link
-- meter
 - table
 
 ## Typography

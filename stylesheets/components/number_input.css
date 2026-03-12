@@ -4,17 +4,19 @@ input[type=time], input[type=date], input[type=datetime-local], input[type=numbe
 	display:inline-flex;
 	cursor: initial;
 
-	font: var(--number-input_font);
-	background: var(--number-input_background);
-	border: var(--number-input_border);
+	font: var(--text-input_font);
+	color: var(--text-input_color);
+	background: var(--text-input_background);
+	border: var(--text-input_border);
+	line-height: var(--line-height);
+
+	padding-inline: calc(0.5 * (1lh - 1ch));
+
+	border-radius: var(--text-input_border-radius);
 	border-radius: var(--number-input_border-radius);
 	border-end-start-radius: var(--number-input_border-radius-bottom);
 	border-end-end-radius: var(--number-input_border-radius-bottom);
-	border-inline-start: var(--number-input_border);
-	border-block-end: var(--number-input_border);
-	padding-inline: var(--number-input_padding-inline);
-	padding-block: var(--number-input_padding-block);
-	color: var(--color);
+
 	transition: all var(--transition-time);
 
 	&:focus {

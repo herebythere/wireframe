@@ -49,9 +49,8 @@
 	--text-input_color: var(--color-wf);
 	--text-input_font: var(--font-family-wf);
 	--text-input_background: none;
-	--text-input_border: var(--color-wf);
-	--text-input_border-radius: 0;
 	--text-input_border: 1px solid var(--color-wf);
+	--text-input_border-radius: 0;
 	--text-input_border-block-start: ;
 	--text-input_border-block-end: ;
 	--text-input_border-inlne-start: ;

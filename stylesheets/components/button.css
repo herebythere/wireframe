@@ -1,3 +1,5 @@
+/* https://developer.apple.com/design/human-interface-guidelines/buttons */
+
 button[data-wf], input[type=button][data-wf] {
 	appearance: none;
 	cursor: pointer;
@@ -13,19 +15,19 @@ button[data-wf], input[type=button][data-wf] {
 	padding-inline: var(--button_padding-inline);
 	transition: var(--press_transition-time);
 
-	/* @media (hover: hover) {
+	@media (hover: hover) {
 		&:hover {
 			background: var(--press_background_hover);
 			border: var(--press_border_hover);
 			color: var(--press_color_hover);
 		}
-	} */
+	}
 
-	/* &:active {
+	&:active {
 		background: var(--press_background_active);
 		border: var(--press_border_active);
 		color: var(--press_color_active);
-	} */
+	}
 
 	&:disabled {
 		cursor: not-allowed;
@@ -36,3 +38,25 @@ button[data-wf], input[type=button][data-wf] {
 		opacity: var(--press_opacity_disabled);
 	}
 }
+
+button[data-wf=primary], input[type=button][data-wf=primary] {
+	background: var(--press_background_primary);
+	border: var(--press_border_primary);
+	color: var(--press_color_primary);
+}
+
+button[data-wf=destructive], input[type=button][data-wf=destructive] {
+	background: var(--press_background_primary);
+	border: var(--press_border_destructive);
+	color: var(--press_color_destructive);
+}
+
+button[data-wf=cancel], input[type=button][data-wf=cancel] {
+	background: var(--press_background_primary);
+	border: var(--press_border_cancel);
+	color: var(--press_color_cancel);
+}
+
+/* system button primary */
+/* system button destructive */
+/* system button cancel */

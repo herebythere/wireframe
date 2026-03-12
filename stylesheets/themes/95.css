@@ -17,8 +17,8 @@
 	--press_background: var(--background-color-inverted);
 	--press_border: 1px solid var(--color-wf);
 	--press_color: var(--color-wf);
-	--press_font: 100 0.8rem/var(--line-height) var(--font-family-wf);
-	--press_border-radius: 2px;
+	--press_font: 100 0.75rem/1.2rem var(--font-family-wf);
+	--press_border-radius: 1rem;
 	--press_content_checked: '\2714';
 	--press_content_indeterminate: '\2014';
 
@@ -36,8 +36,10 @@
 	--press_opacity_disabled: ;
 	
 	/* button */
-	--button_padding-block: 0.5rem;
-	--button_padding-inline: 1rem;
+	--button_padding-block: 0rem;
+	--button_padding-inline: 0.75rem;
+	--button_min_block-size: ;
+	--button_max_block-size: ;
 
 	/* checkbox */
 	--checkbox_block-size: 1.5rem;
