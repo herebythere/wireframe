@@ -13,29 +13,35 @@ export const template = `
 let templateEl = document.createElement("template");
 templateEl.setHTMLUnsafe(template);
 
+
 function getSlotElement(el: HTMLElement): HTMLSlotElement | null {
 	let internals = el.attachInternals();
-
 	let ssr = null !== internals.shadowRoot;
 	let shadowRoot = internals.shadowRoot 
 		? internals.shadowRoot
 		: el.attachShadow({ mode: "closed" });
 	
 	if (!ssr) {
-		shadowRoot.appendChild(templateEl.content.cloneNode(true));
+		console.log("NO SSR!");
+		shadowRoot.appendChild(document.importNode(templateEl.content, true));
 	}
 
 	return shadowRoot.querySelector("slot");
 }
 
 export class InlineMovement extends HTMLElement {
+	static observerdAttributes = ["data-selector"];
+
 	#boundOnSlotChange = this.#onSlotChange.bind(this);
 	#boundOnClick = this.#onClick.bind(this);
 	#boundOnKey = this.#onKey.bind(this);
 	#slot = getSlotElement(this);
 	#computedStyle = window.getComputedStyle(this);
 
-	static observerdAttributes = ["data-selector"];
+	constructor() {
+		super();
+		console.log("constructing!")
+	}
 
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
 		if ("data-selector" === name) {
@@ -68,6 +74,7 @@ export class InlineMovement extends HTMLElement {
 	}
 
 	#onKey(event: KeyboardEvent) {
+		console.log(event);
 		if ("ArrowUp" === event.key) { }
 		if ("ArrowRight" === event.key) { }
 		if ("ArrowDown" === event.key) { }
@@ -79,6 +86,7 @@ export class InlineMovement extends HTMLElement {
 	}
 
 	#onClick(event: PointerEvent) {
+		console.log(event);
 		// if click happened on focusable element
 
 		// update el.setAttribute("tabindex", 0);

@@ -21,6 +21,7 @@ A single css stylesheet includes the following components:
 	- date
 	- datetime-local
 - textarea
+- meter
 - slider
 - progress
 
