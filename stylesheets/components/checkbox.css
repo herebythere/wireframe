@@ -10,7 +10,7 @@ input[type=checkbox] {
 	inline-size: var(--checkbox_block-size);
 	font: var(--press_font);
 	background: var(--press_background);
-	color: var(--press_color);
+	color: transparent;
 	border: var(--press_border);
 	border-radius: calc(0.5 * var(--press_border-radius));
 	transition: all var(--transition-time);
@@ -24,11 +24,8 @@ input[type=checkbox] {
 	}
 
 	&:checked {
-		color: var(--press_content_indeterminate);
-
-		&:hover {
-			color: var(--press_color_hover);
-		}
+		color: var(--checkbox_check_color);
+		background: var(--checkbox_check_background);
 
 		&:disabled {
 			color: var(--press_color_disabled);

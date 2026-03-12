@@ -1,4 +1,6 @@
-button, input[type=button] {
+/* https://developer.apple.com/design/human-interface-guidelines/buttons */
+
+button[data-wf], input[type=button][data-wf] {
 	appearance: none;
 	cursor: pointer;
 	display: inline-flex;
@@ -7,8 +9,8 @@ button, input[type=button] {
 	background: var(--press_background);
 	border-radius: var(--press_border-radius);
 	border: var(--press_border);
-	color: var(--button_color);
-	font: var(--button_font);
+	color: var(--press_color);
+	font: var(--press_font);
 	padding-block: var(--button_padding-block);
 	padding-inline: var(--button_padding-inline);
 	transition: var(--press_transition-time);
@@ -36,3 +38,25 @@ button, input[type=button] {
 		opacity: var(--press_opacity_disabled);
 	}
 }
+
+button[data-wf=primary], input[type=button][data-wf=primary] {
+	background: var(--press_background_primary);
+	border: var(--press_border_primary);
+	color: var(--press_color_primary);
+}
+
+button[data-wf=destructive], input[type=button][data-wf=destructive] {
+	background: var(--press_background_primary);
+	border: var(--press_border_destructive);
+	color: var(--press_color_destructive);
+}
+
+button[data-wf=cancel], input[type=button][data-wf=cancel] {
+	background: var(--press_background_primary);
+	border: var(--press_border_cancel);
+	color: var(--press_color_cancel);
+}
+
+/* system button primary */
+/* system button destructive */
+/* system button cancel */

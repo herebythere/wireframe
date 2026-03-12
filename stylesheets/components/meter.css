@@ -2,18 +2,37 @@ meter {
 	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
-	appearance: none;
-	background: transparent;
+	/* appearance: none; */
+	background: none;
+	background-color: none;
 	margin: 0;
 	color: #efefef;
 	border: 2px solid #efefef;
-	height: 16px;
+	block-size: var(--line-height);
 	cursor: pointer;
+	box-shadow: none;
 }
 
+meter::-moz-meter-bar {
+	background: #efefef;
+}
 
-meter::-webkit-meter-bar {}
-meter::-webkit-meter-optimum-value {}
-meter::-webkit-meter-suboptimum-value {}
-meter::-webkit-meter-even-less-good-value {}
-meter::-webkit-meter-inner-element {}
+/* deprecated but alternative not implemented */
+meter::-webkit-meter-bar {
+	background: none;
+	border-radius: 5px;
+}
+
+meter::-webkit-meter-inner-element {
+	margin: 0;
+	background: none;
+	background-color: none;
+	color: #efefef;
+}
+
+meter::-webkit-meter-optimum-value {
+	margin: 0;
+	/* color: #efefef; */
+	background: #efefef;
+	border: 2px solid #efefef;
+}

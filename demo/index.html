@@ -2,22 +2,22 @@
 <html>
 
 <head>
-	<link href="../stylesheets/drafts/properties.drafts.css" rel="stylesheet">
+	<link href="../stylesheets/themes/95.css" rel="stylesheet">
 	</link>
 	<link href="../dist/wireframe.css" rel="stylesheet">
 	</link>
 	<link href="./demo.css" rel="stylesheet">
 	</link>
-	<style>
 
-	</style>
+	<script type="module" src="../components/dist/inline_movement.js">
+	</script>
 </head>
 
 <body>
 	<main>
 		<ul>
 			<li>
-				<button>Click me!</button>
+				<button data-wf>Click me!</button>
 			</li>
 			<li>
 				<input type="checkbox">
@@ -26,7 +26,9 @@
 				<input type="checkbox" role="switch">
 			</li>
 			<li>
-				<input type="radio">
+				<input type="radio" name="radio-demo">
+				<input type="radio" name="radio-demo">
+				<input type="radio" name="radio-demo">
 			</li>
 			<li>
 				<input type="text">
@@ -66,6 +68,53 @@
 			</li>
 			<li>
 				<textarea></textarea>
+			</li>
+			<table>
+				<caption>
+					Front-end web developer course 2021
+				</caption>
+				<thead>
+					<tr>
+						<th scope="col">Person</th>
+						<th scope="col">Most interest in</th>
+						<th scope="col">Age</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Chris</th>
+						<td>HTML tables</td>
+						<td>22</td>
+					</tr>
+					<tr>
+						<th scope="row">Dennis</th>
+						<td>Web accessibility</td>
+						<td>45</td>
+					</tr>
+					<tr>
+						<th scope="row">Sarah</th>
+						<td>JavaScript frameworks</td>
+						<td>29</td>
+					</tr>
+					<tr>
+						<th scope="row">Karen</th>
+						<td>Web performance</td>
+						<td>36</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th scope="row" colspan="2">Average age</th>
+						<td>33</td>
+					</tr>
+				</tfoot>
+			</table>
+			<li>
+				<inline-movement>
+					<button>:#</button>
+					<button>:3</button>
+					<button>:D</button>
+				</inline-movement>
 			</li>
 		</ul>
 	</main>

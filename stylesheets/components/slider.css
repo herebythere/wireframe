@@ -5,6 +5,8 @@ input[type=range] {
 	margin: 0;
 	border: 2px solid #efefef;
 	block-size: 16px;
+	block-size: var(--line-height);
+
 	/* writing-mode: vertical-lr; */
 }
 
@@ -19,7 +21,7 @@ input[type=range]::-webkit-slider-thumb {
 	border: 2px solid #efefef;
 	position: relative;
 	border-radius: 0;
-	height: 16px;
+	block-size: 16px;
 	width: 16px;
 	top: 7px;
 	cursor: pointer;
@@ -34,7 +36,7 @@ input[type=range]::-moz-range-thumb {
 	border: 2px solid #efefef;
 	border-radius: 0;
 	position: relative;
-	height: 16px;
+	block-size: 16px;
 	width: 16px;
 	top: 7px;
 	cursor: pointer;
