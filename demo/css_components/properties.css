@@ -60,6 +60,17 @@
 	--switch-island_color_checked: var(--color-inverted-wf);
 	--switch-island_background_checked: var(--color-wf);
 
+	/* radio */
+	--radio_border: 2px solid var(--color-wf);
+	--radio_background: none;
+	--radio_block-size: 1.5rem;
+
+	--radio-island_border: none;
+	--radio-island_background: none;
+	--radio-island_block-size: 1rem;
+	--radio-island_border_checked: none;
+	--radio-island_background_checked: var(--color-wf);
+
 
 	/* text (general keyboard input) */
 	--text-input_color: var(--color-wf);
