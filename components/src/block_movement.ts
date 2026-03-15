@@ -26,7 +26,7 @@ function getSlotElement(el: HTMLElement): HTMLSlotElement | null {
 	return shadowRoot.querySelector("slot");
 }
 
-export class InlineMovement extends HTMLElement {
+export class BlockMovement extends HTMLElement {
 	static observerdAttributes = ["data-selector"];
 
 	#boundOnSlotChange = this.#onSlotChange.bind(this);

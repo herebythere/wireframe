@@ -3,13 +3,14 @@ input[type=checkbox][role=switch] {
 	position: relative;
 	display: inline-flex;
 	justify-content: start;
-	inline-size: 3rem;
-	block-size: 1.75rem;
-	font-size: 0.5em;
 	cursor: pointer;
-	border-radius: 1.75rem;
 
-	border: var(--press_border);
+	inline-size: var(--switch_inline-size);
+	block-size: var(--switch_block-size);
+	border-radius: var(--switch_border-radius);
+	border: var(--switch_border);
+	background: var(--switch_background);
+
 	transition: all var(--transition-time);
 
 	&::before {
@@ -28,34 +29,48 @@ input[type=checkbox][role=switch] {
 		inline-size: 0.5rem;
 		block-size: 0.5rem;
 		border-radius: 0.5rem;
-		margin-inline: calc((1.5rem - 0.5rem) * 0.5 - 2px);
-		border: var(--press_border);
+		margin-inline: calc(((var(--switch_inline-size) * 0.5) - var(--switch-island_inline-size)) * 0.5 - 2px);
+
+		font: var(--switch-island_font);
+		border-radius: var(--switch-island_border-radius);
+		border: var(--switch-island_border);
+		background: var(--switch-island_background);
+		inline-size: var(--switch-island_inline-size);
+		block-size: var(--switch-island_block-size);
+
 		transition: all var(--transition-time);
 	}
 
 	&:checked {
-		background: var(--background);
+		border: var(--switch_border_checked, var(--switch_border));
+		background: var(--switch_background_checked, var(--switch_background));
 
 		&::before {
 			flex-grow: 1;
 		}
 
 		&::after {
-			content: '\002714';
-			inline-size: 0.95rem;
-			block-size: 0.95rem;
-			border-radius: 0.95rem;
-			margin-inline: calc((1.5rem - 0.95rem) * 0.5 - 2px);
-			background: var(--background_inverted);
-			color: var(--press_background);
+			content: var(--switch-island_content_checked);
+
+			margin-inline: calc(((var(--switch_inline-size) * 0.5) - var(--switch-island_inline-size_checked)) * 0.5 - 2px);
+			color: var(--switch-island_color_checked, var(--switch-island_color));
+			inline-size: var(--switch-island_inline-size_checked, var(--switch-island_inline-size));
+			block-size: var(--switch-island_block-size_checked, var(--switch-island_block-size));
+			border: var(--switch-island_border_checked, var(--switch-island_border));
+			background: var(--switch-island_background_checked, var(--switch-island_background));
 		}
 	}
 
 	&:disabled {
 		cursor: not-allowed;
 
-		background: var(--press_background_disabled);
-		border: var(--press_border_disabled);
-		opacity: var(--press_opacity_disabled);
+		background: var(--switch_background_disabled);
+		border: var(--switch_border_disabled);
+		opacity: var(--switch_opacity_disabled);
+
+		&::after {
+			border: var(--switch-island_border_disabled, var(--switch-island_border));
+			background: var(--switch-island_background_disabled, var(--switch-island_background));
+		}
 	}
 }

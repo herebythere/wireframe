@@ -5,6 +5,8 @@
 		"build": "npm run build:bundle",
 		"bundle": "npm run css:bundle",
 		"build:bundle": "npx tsc --project ./bundle/",
+		"build:components": "npx tsc --project ./components/",
+		"build:demo": "npx tsc --project ./demo/",
 		"css:bundle": "node bundle/dist/mod.js ./stylesheets/mod.css ./dist/wireframe.css"
 	},
 	"devDependencies": {
