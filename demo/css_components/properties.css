@@ -39,8 +39,27 @@
 	--checkbox_content_indeterminate: '\2014';
 
 	/* switch / toggle */
-	--switch_inline-size: 1.5rem;
-	--switch_island-size: 0.9rem;
+	--switch_inline-size: 3rem;
+	--switch_block-size: 1.75rem;
+	--switch_border-radius: 1.75rem;
+	--switch_border: 2px solid var(--color-wf);
+	--switch_background: none;
+
+	--switch-island_inline-size: 0.5rem;
+	--switch-island_block-size: 0.5rem;
+	--switch-island_color: var(--color-wf);
+	--switch-island_font: var(--font-family-wf);
+	--switch-island_border-radius: 50%;
+	--switch-island_border: 2px solid var(--color-wf);
+	--switch-island_background: none;
+
+	--switch-island_inline-size_checked: 1rem;
+	--switch-island_block-size_checked: 1rem;
+	--switch-island_content_checked: '\2714';
+	--switch-island_border_checked: 2px solid var(--color-wf);
+	--switch-island_color_checked: var(--color-inverted-wf);
+	--switch-island_background_checked: var(--color-wf);
+
 
 	/* text (general keyboard input) */
 	--text-input_color: var(--color-wf);
