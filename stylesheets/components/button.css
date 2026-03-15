@@ -1,6 +1,6 @@
 /* https://developer.apple.com/design/human-interface-guidelines/buttons */
 
-button[data-wf], input[type=button][data-wf] {
+:is(button[data-wf], button[wf], input[type=button][data-wf], input[type=button][wf]) {
 	appearance: none;
 	cursor: pointer;
 	display: inline-flex;
@@ -39,19 +39,22 @@ button[data-wf], input[type=button][data-wf] {
 	}
 }
 
-button[data-wf=primary], input[type=button][data-wf=primary] {
+button[data-wf=primary],
+input[type=button][data-wf=primary] {
 	background: var(--press_background_primary);
 	border: var(--press_border_primary);
 	color: var(--press_color_primary);
 }
 
-button[data-wf=destructive], input[type=button][data-wf=destructive] {
+button[data-wf=destructive],
+input[type=button][data-wf=destructive] {
 	background: var(--press_background_primary);
 	border: var(--press_border_destructive);
 	color: var(--press_color_destructive);
 }
 
-button[data-wf=cancel], input[type=button][data-wf=cancel] {
+button[data-wf=cancel],
+input[type=button][data-wf=cancel] {
 	background: var(--press_background_primary);
 	border: var(--press_border_cancel);
 	color: var(--press_color_cancel);

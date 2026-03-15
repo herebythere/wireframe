@@ -2,6 +2,15 @@
 
 A UI component set for the web.
 
+## For developers
+
+Wireframe is delivered as three files:
+- A stylesheet containing all css components
+- A javascript module exporting all web components
+- A json file containing all web components as template elements for SSR
+
+
+
 ## CSS only components
 
 A single css stylesheet includes the following components:
