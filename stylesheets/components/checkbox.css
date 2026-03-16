@@ -16,7 +16,7 @@ input[type=checkbox] {
 	transition: all var(--transition-time);
 
 	&:before {
-		content: "";
+		content: var(--checkbox_content_checked);
 	}
 
 	&:checked {
@@ -24,10 +24,6 @@ input[type=checkbox] {
 		color: var(--checkbox_color_checked, var(--checkbox_color));
 		font: var(--checkbox_font_checked, var(--checkbox_font));
 		background: var(--checkbox_background_checked, var(--checkbox_background));
-
-		&::before {
-			content: var(--checkbox_content_checked);
-		}
 	}
 	
 	&:indeterminate::before {

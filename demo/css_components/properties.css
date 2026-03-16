@@ -5,10 +5,12 @@
 	--color-inverted-wf: light-dark(#f9f9f9, #3e3e3e);
 	--font-family-wf: "SF Pro", "San Francisco", "Roboto Flex", "Segoe UI Variable", Helvetica, sans-serif;
 
+
 	/* general */
-	--transition-time: 150ms;
+	--transition-time: 500ms;
 	--color: var(--color-wf);
 	--line-height: 2rem;
+
 
 	/* press (general press-able items) */
 	--press_background: none;
@@ -18,7 +20,8 @@
 	--press_border-radius: 4px;
 	--press_content_checked: '\2714';
 	--press_content_indeterminate: '\2014';
-	
+
+
 	/* button */
 	--button_border: 2px solid var(--color-wf);
 	--button_border-radius: 4px;
@@ -27,6 +30,7 @@
 	--button_color: 0.5rem;
 	--button_padding-block: 0.5rem;
 	--button_padding-inline: 1rem;
+
 
 	/* checkbox */
 	--checkbox_border: 2px solid var(--color-wf);
@@ -37,6 +41,7 @@
 	--checkbox_background_checked: var(--color-wf);
 	--checkbox_content_checked: '\2714';
 	--checkbox_content_indeterminate: '\2014';
+
 
 	/* switch / toggle */
 	--switch_inline-size: 3rem;
@@ -59,6 +64,7 @@
 	--switch-island_border_checked: 2px solid var(--color-wf);
 	--switch-island_color_checked: var(--color-inverted-wf);
 	--switch-island_background_checked: var(--color-wf);
+
 
 	/* radio */
 	--radio_border: 2px solid var(--color-wf);
@@ -90,6 +96,7 @@
 	--text-input_padding-inline: ;
 	--text-input_padding-block: ;
 
+	
 	/* text disabled */
 	--text-input_background_disabled: ;
 	--text-input_border_disabled: ;

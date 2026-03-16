@@ -1,11 +1,14 @@
 input[type=range] {
 	-webkit-appearance: none;
 	appearance: none;
-	background: transparent;
+	background: var(--color-wf);
 	margin: 0;
-	border: 2px solid #efefef;
-	block-size: 16px;
-	block-size: var(--line-height);
+	/* border: 2px solid #efefef; */
+	block-size: 2px;
+	min-width: 200px;
+		cursor: pointer;
+
+	/* block-size: var(--line-height); */
 
 	/* writing-mode: vertical-lr; */
 }
@@ -21,12 +24,12 @@ input[type=range]::-webkit-slider-thumb {
 	border: 2px solid #efefef;
 	position: relative;
 	border-radius: 0;
-	block-size: 16px;
-	width: 16px;
-	top: 7px;
-	cursor: pointer;
-	margin-block-start: -14px;
-	background: none;
+	block-size: 2rem;
+	inline-size: 1rem;
+	/* inset-block-start: calc(1rem * 0.5); */
+	/* cursor: pointer; */
+	/* margin-block-start: -14px; */
+	background: var(--color-inverted-wf);
 	/* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 }
 
@@ -36,10 +39,9 @@ input[type=range]::-moz-range-thumb {
 	border: 2px solid #efefef;
 	border-radius: 0;
 	position: relative;
-	block-size: 16px;
-	width: 16px;
-	top: 7px;
+	block-size: 2rem;
+	inline-size: 1rem;
+	/* inset-block-start: calc(1rem * 0.5); */
 	cursor: pointer;
-	margin-top: -16px;
 	background: none;
 }
