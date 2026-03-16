@@ -1,7 +1,9 @@
 :root {
 	color-scheme: light dark;
 
-	--color-wf: light-dark(#3e3e3e, #f9f9f9);
+	--color-wf: light-dark(#3e3e3e, #e9e9e9);
+	--text-color-wf: light-dark(#3e3e3e, #e9e9e9);
+
 	--color-inverted-wf: light-dark(#f9f9f9, #3e3e3e);
 	--font-family-wf: "SF Pro", "San Francisco", "Roboto Flex", "Segoe UI Variable", Helvetica, sans-serif;
 
@@ -25,7 +27,7 @@
 	/* button */
 	--button_border: 2px solid var(--color-wf);
 	--button_border-radius: 4px;
-	--button_font: var(--font-family-wf);
+	--button_font: 1rem var(--font-family-wf);
 	--button_background: 2px solid var(--color-wf);
 	--button_color: 0.5rem;
 	--button_padding-block: 0.5rem;
@@ -80,25 +82,27 @@
 
 	/* text (general keyboard input) */
 	--text-input_color: var(--color-wf);
-	--text-input_font: var(--font-family-wf);
-	--text-input_background: none;
-	--text-input_border: 1px solid var(--color-wf);
+	--text-input_font: 1rem var(--font-family-wf);
+	--text-input_background: light-dark(#efefef, #484848);
+	--text-input_border: none;
 	--text-input_border-radius: 0;
 	--text-input_border-block-start: ;
-	--text-input_border-block-end: ;
+	--text-input_border-block-end: 2px solid light-dark(#2a2a2a, #efefef);
 	--text-input_border-inlne-start: ;
 	--text-input_border-inlne-end: ;
 	--text-input_border-start-start-radius: ;
 	--text-input_border-start-end-radius: ;
 	--text-input_border-end-start-radius: ;
 	--text-input_border-end-end-radius: ;
-
 	--text-input_padding-inline: ;
 	--text-input_padding-block: ;
 
-	
+
 	/* text disabled */
 	--text-input_background_disabled: ;
 	--text-input_border_disabled: ;
 	--text-input_opacity_disabled: ;
+
+	/* number input */
+	--number-input_font: 1rem monospace, monospace;
 }

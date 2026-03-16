@@ -14,10 +14,12 @@
 	border-radius: var(--text-input_border-radius);
 	line-height: var(--line-height);
 
-	border-end-start-radius: var(--text-input_border-radius-bottom);
+	cursor: pointer;
+
+	/* border-end-start-radius: var(--text-input_border-radius-bottom);
 	border-end-end-radius: var(--text-input_border-radius-bottom);
-	border-inline-start: var(--text-input_border);
-	border-block-end: var(--text-input_border);
+	border-inline-start: var(--text-input_border); */
+	/* border-block-end: var(--text-input_border-block-end); */
 	padding-inline: var(--text-input_padding-inline);
 	padding-block: var(--text-input_padding-block);
 
@@ -25,6 +27,7 @@
 
 	&:focus {
 		outline: none;
+		cursor: initial;
 	}
 	
 	&:disabled {

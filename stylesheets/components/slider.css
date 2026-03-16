@@ -43,5 +43,5 @@ input[type=range]::-moz-range-thumb {
 	inline-size: 1rem;
 	/* inset-block-start: calc(1rem * 0.5); */
 	cursor: pointer;
-	background: none;
+	background: var(--color-inverted-wf);
 }
