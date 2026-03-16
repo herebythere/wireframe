@@ -2,7 +2,7 @@
 	"name": "@herebythere/wireframe",
 	"type": "module",
 	"scripts": {
-		"build": "npm run build:bundle",
+		"build": "npm run build:bundle && npm run build:demo && npm run build:components",
 		"bundle": "npm run css:bundle",
 		"build:bundle": "npx tsc --project ./bundle/",
 		"build:components": "npx tsc --project ./components/",

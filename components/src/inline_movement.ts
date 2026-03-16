@@ -35,6 +35,16 @@ export class InlineMovement extends HTMLElement {
 	#slot = getSlotElement(this);
 	#computedStyle = window.getComputedStyle(this);
 
+	#selector = this.getAttribute("selector") ?? ":is(input, button, textarea)";
+	#slotted = getAssignedNodes(this.#slot, this.#selector);
+	#mapped = getMappedElements(this.#slotted);
+
+	constructor() {
+		super();
+		console.log(this.#slotted);
+		console.log(this.#mapped);
+	}
+
 	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
 		if ("data-selector" === name) {
 			// update the "selected" slots
@@ -75,13 +85,44 @@ export class InlineMovement extends HTMLElement {
 		if ("rtl" === this.#computedStyle.direction) {
 			// reverse direction
 		}
+
+		for (let node of event.composedPath()) {
+			if (node instanceof HTMLElement) {
+				let index = this.#mapped.get(node);
+			}
+		}
 	}
 
 	#onClick(event: PointerEvent) {
 		console.log(event);
-		// if click happened on focusable element
 
-		// update el.setAttribute("tabindex", 0);
-		
+		for (let node of event.composedPath()) {
+			if (node instanceof HTMLElement) {
+				let index = this.#mapped.get(node);
+			}
+		}
 	}
+}
+
+function getAssignedNodes(slot: HTMLSlotElement | null, selector: string | null): Element[] {
+	if (!slot) return [];
+	if (!selector) return slot.assignedElements();
+
+	let elements: Element[] = [];
+	for (let el of slot.assignedElements()) {
+		if (el.matches(selector)) {
+			elements.push(el);
+		}
+	}
+
+	return elements;
+}
+
+function getMappedElements(elements: Element[]): WeakMap<Element, number> {
+	let map = new WeakMap();
+	for (const [index, el] of elements.entries()) {
+		map.set(el, index);
+	}
+
+	return map;
 }
