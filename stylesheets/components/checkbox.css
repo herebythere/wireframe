@@ -5,6 +5,7 @@ input[type=checkbox] {
 	justify-content: center;
 	align-items: center;
 	color: transparent;
+	opacity: 1;
 	cursor: pointer;
 
 	block-size: var(--checkbox_block-size);
@@ -20,21 +21,21 @@ input[type=checkbox] {
 	}
 
 	&:checked {
+		color: var(--checkbox_color);
 		border: var(--checkbox_border_checked, var(--checkbox_border));
-		color: var(--checkbox_color_checked, var(--checkbox_color));
 		background: var(--checkbox_background_checked, var(--checkbox_background));
 	}
 
 	&:indeterminate::before {
-		content: var(--checkbox_content_indeterminate);
+		content: var(--checkbox_content_indeterminate, '\2014');
 	}
 
-	/* edge case where checkbox is checked AND disabled */
 	&:disabled {
 		cursor: not-allowed;
 
 		border: var(--checkbox_border_disabled, var(--checkbox_border));
 		background: var(--checkbox_background_disabled, var(--checkbox_background));
+		opacity: var(--checkbox_opacity_disabled, 1);
 
 		&:checked {
 			color: var(--checkbox_color_disabled, var(--checkbox_color));

@@ -19,7 +19,6 @@
 		&:hover {
 			background: var(--button_background_hover, var(--button_background));
 			border: var(--button_border_hover, var(--button_border));
-			font: var(--button_font_hover, var(--button_font));
 			color: var(--button_color_hover, var(--button_color));
 		}
 	}
@@ -27,7 +26,6 @@
 	&:active {
 		background: var(--button_background_active, var(--button_background));
 		border: var(--button_border_active, var(--button_border));
-		font: var(--button_font_active, var(--button_font));
 		color: var(--button_color_active, var(--button_color));
 	}
 
@@ -36,17 +34,21 @@
 
 		background: var(--button_background_disabled, var(--button_background));
 		border: var(--button_border_disabled, var(--button_border));
-		font: var(--button_font_disabled, var(--button_font));
 		color: var(--button_color_disabled, var(--button_color));
 		opacity: var(--button_opacity_disabled);
 	}
 }
 
+/* all of these should fallback to button stuffs */
 button[data-wf=primary],
 input[type=button][data-wf=primary] {
 	background: var(--primary-button_background);
 	border: var(--primary-button_border);
 	color: var(--primary-button_color);
+
+	/* hover */
+	/* active */
+	/* disabled */
 }
 
 button[data-wf=destructive],
@@ -54,6 +56,10 @@ input[type=button][data-wf=destructive] {
 	background: var(--desctructive-button_background);
 	border: var(--desctructive-button_border);
 	color: var(--desctructive-button_color);
+
+	/* hover */
+	/* active */
+	/* disabled */
 }
 
 button[data-wf=cancel],
@@ -61,6 +67,10 @@ input[type=button][data-wf=cancel] {
 	background: var(--cancel-button_background);
 	border: var(--cancel-button_border);
 	color: var(--cancel-button_color);
+
+	/* hover */
+	/* active */
+	/* disabled */
 }
 
 /* system button primary */

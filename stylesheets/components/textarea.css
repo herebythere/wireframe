@@ -1,30 +1,45 @@
 /* places for fonts and line heights */
 textarea {
 	appearance: none;
-	background: var(--text-input_background);
-	font: var(--text-input_font);
-	cursor: initial;
+	cursor: pointer;
 	min-inline-size: 225px;
-	min-block-size: calc(var(--line-height) * 2);
+	
+	border-end-end-radius: 0;
+	resize: none;
 
+	font: var(--text-input_font);
+	min-block-size: calc(var(--line-height) * 2);
+	background: var(--text-input_background);
 	border: var(--text-input_border);
 	border-inline-start: var(--text-input_border-bottom, var(--text-input_border));
 	border-block-end: var(--text-input_border-bottom, var(--text-input_border));
+	border-radius: var(--text-input_border-radius);
 
+	/* needs to be a parameter */
+	padding-inline: var(--text-input_padding-inline);
+	padding-block: var(--text-input_padding-block);
+
+	outline: none;
 	/* opinionated */
 	field-sizing: content;
 
 	transition: all var(--transition-time);
 
+	&:focus {
+		outline: none;
+		cursor: initial;
+	}
+	
 	&:disabled {
 		cursor: not-allowed;
 
 		background: var(--text-input_background_disabled, var(--text-input_background));
 		border: var(--text-input_border_disabled, var(--text-input_border));
 		box-shadow: var(--text-input_box-shadow_disabled, var(--text-input_box-shadow));
-		opacity: var(--text-input_opacity_disabled, var(--text-input_opacity));
+		opacity: var(--text-input_opacity_disabled, var(--text-input_opacity));	
+	}
 
-		outline: var(--outline);
-		outline-offset: var(--outline-offset);		
+		&::placeholder {
+		/* colors */
 	}
 }

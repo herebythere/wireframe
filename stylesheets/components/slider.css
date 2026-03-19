@@ -3,14 +3,9 @@ input[type=range] {
 	appearance: none;
 	background: var(--color-wf);
 	margin: 0;
-	/* border: 2px solid #efefef; */
 	block-size: 2px;
 	min-width: 200px;
-		cursor: pointer;
-
-	/* block-size: var(--line-height); */
-
-	/* writing-mode: vertical-lr; */
+	cursor: pointer;
 }
 
 input[type=range]::-ms-track {
@@ -21,27 +16,22 @@ input[type=range]::-ms-track {
 
 input[type=range]::-webkit-slider-thumb {
 	-webkit-appearance: none;
-	border: 2px solid #efefef;
+	border: 2px solid var(--color-wf);
 	position: relative;
-	border-radius: 0;
+	border-radius: var(--range-thumb_border-radius, 1rem);
 	block-size: 2rem;
 	inline-size: 1rem;
-	/* inset-block-start: calc(1rem * 0.5); */
-	/* cursor: pointer; */
-	/* margin-block-start: -14px; */
 	background: var(--color-inverted-wf);
-	/* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 }
 
 input[type=range]::-moz-range-thumb {
 	appearance: none;
 	-moz-appearance: none;
-	border: 2px solid #efefef;
-	border-radius: 0;
+	border: 2px solid var(--color-wf);
+	border-radius: var(--range-thumb_border-radius, 1rem);
 	position: relative;
 	block-size: 2rem;
 	inline-size: 1rem;
-	/* inset-block-start: calc(1rem * 0.5); */
 	cursor: pointer;
 	background: var(--color-inverted-wf);
 }
