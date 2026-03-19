@@ -14,38 +14,47 @@
 	--line-height: 2rem;
 
 
-	/* press (general press-able items) */
-	--press_background: none;
-	--press_border: 2px solid var(--color-wf);
-	--press_color: var(--color-wf);
-	--press_font: var(--font-family-wf);
-	--press_border-radius: 4px;
-	--press_content_checked: '\2714';
-	--press_content_indeterminate: '\2014';
-
-
-	/* button */
+	/* BUTTON */
 	--button_border: 2px solid var(--color-wf);
-	--button_border-radius: 4px;
+	--button_border-radius: 1lh;
 	--button_font: 1rem var(--font-family-wf);
-	--button_background: 2px solid var(--color-wf);
+	--button_background: var(--color-inverted-wf);
 	--button_color: 0.5rem;
 	--button_padding-block: 0.5rem;
 	--button_padding-inline: 1rem;
 
+	/* button - optional, fallbacks to above */
+	/* --button_border_hover: 2px solid var(--color-wf);
+	--button_background_hover: var(--color-wf);
+	--button_color_hover: 0.5rem; */
 
-	/* checkbox */
+	--button_border_active: 2px solid var(--color-wf);
+	--button_background_active: var(--color-wf);
+	--button_color_active: 0.5rem;
+
+	--button_border_disabled: 2px solid var(--color-wf);
+	--button_background_disabled: var(--color-wf);
+	--button_color_disabled: 0.5rem;
+	--button_opacity_disabled: 0.5;
+
+
+	/* CHECKBOX */
+	--checkbox_block-size: 1.5rem;
 	--checkbox_border: 2px solid var(--color-wf);
 	--checkbox_border-radius: 4px;
 	--checkbox_font: 1rem var(--font-family-wf);
-	--checkbox_block-size: 1.5rem;
-	--checkbox_color_checked: var(--color-inverted-wf);
+	--checkbox_color: var(--color-inverted-wf);
+
 	--checkbox_background_checked: var(--color-wf);
 	--checkbox_content_checked: '\2714';
 	--checkbox_content_indeterminate: '\2014';
 
+	--checkbox_border_disabled: 2px solid var(--color-wf);
+	--checkbox_background_disabled: var(--color-wf);
+	--checkbox_color_disabled: ;
 
-	/* switch / toggle */
+
+	/* SWITCH / TOGGLE */
 	--switch_inline-size: 3rem;
 	--switch_block-size: 1.75rem;
 	--switch_border-radius: 1.75rem;
@@ -68,34 +77,35 @@
 	--switch-island_background_checked: var(--color-wf);
 
 
-	/* radio */
+	/* RADIO */
 	--radio_border: 2px solid var(--color-wf);
 	--radio_background: none;
 	--radio_block-size: 1.5rem;
 
-	--radio-island_border: none;
 	--radio-island_background: none;
 	--radio-island_block-size: 1rem;
+	--radio-island_border: none;
+
 	--radio-island_border_checked: none;
 	--radio-island_background_checked: var(--color-wf);
 
 
-	/* text (general keyboard input) */
+	/* TEXT INPUT (general keyboard input) */
 	--text-input_color: var(--color-wf);
 	--text-input_font: 1rem var(--font-family-wf);
 	--text-input_background: light-dark(#efefef, #484848);
 	--text-input_border: none;
-	--text-input_border-radius: 0;
+	--text-input_border-radius: 1lh;
 	--text-input_border-block-start: ;
-	--text-input_border-block-end: 2px solid light-dark(#2a2a2a, #efefef);
+	/* --text-input_border-block-end: 1px solid light-dark(#2a2a2a, #efefef); */
 	--text-input_border-inlne-start: ;
 	--text-input_border-inlne-end: ;
 	--text-input_border-start-start-radius: ;
 	--text-input_border-start-end-radius: ;
 	--text-input_border-end-start-radius: ;
 	--text-input_border-end-end-radius: ;
-	--text-input_padding-inline: ;
-	--text-input_padding-block: ;
+	--text-input_padding-inline: 1lh;
+	--text-input_padding-block: 0.5lh;
 
 
 	/* text disabled */
@@ -103,6 +113,11 @@
 	--text-input_border_disabled: ;
 	--text-input_opacity_disabled: ;
 
-	/* number input */
+	/* DIGIT INPUT */
 	--number-input_font: 1rem monospace, monospace;
+	--number-input_font: 1rem var(--font-family-wf);
+
+	/* PROGRESS */
+	--progress_border: 2px solid var(--color-wf);
+	--progress_border-radius: 1lh;
 }
