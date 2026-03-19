@@ -1,8 +1,11 @@
-input[type=checkbox][role=switch] {
+:is(input[type=checkbox][role=switch]) {
 	appearance: none;
 	position: relative;
 	display: inline-flex;
 	justify-content: start;
+	align-items: center;
+	color: transparent;
+	opacity: 1;
 	cursor: pointer;
 
 	inline-size: var(--switch_inline-size);

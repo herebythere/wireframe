@@ -1,4 +1,4 @@
-input[type=checkbox] {
+:is(input[type=checkbox][data-wf], input[type=checkbox][wf]):not([role=switch]) {
 	appearance: none;
 	position: relative;
 	display: inline-flex;

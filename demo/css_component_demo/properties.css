@@ -42,7 +42,7 @@
 	--checkbox_block-size: 1.5rem;
 	--checkbox_border: 2px solid var(--color-wf);
 	--checkbox_border-radius: 4px;
-	--checkbox_font: 1rem var(--font-family-wf);
+	--checkbox_font: 0.9rem var(--font-family-wf);
 	--checkbox_color: var(--color-inverted-wf);
 
 	--checkbox_background_checked: var(--color-wf);
@@ -64,7 +64,7 @@
 	--switch-island_inline-size: 0.5rem;
 	--switch-island_block-size: 0.5rem;
 	--switch-island_color: var(--color-wf);
-	--switch-island_font: var(--font-family-wf);
+	--switch-island_font: 0.9rem var(--font-family-wf);
 	--switch-island_border-radius: 50%;
 	--switch-island_border: 2px solid var(--color-wf);
 	--switch-island_background: none;
@@ -83,7 +83,7 @@
 	--radio_block-size: 1.5rem;
 
 	--radio-island_background: none;
-	--radio-island_block-size: 1rem;
+	--radio-island_block-size: 0.9rem;
 	--radio-island_border: none;
 
 	--radio-island_border_checked: none;
