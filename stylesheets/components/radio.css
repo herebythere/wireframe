@@ -19,12 +19,11 @@ input[type=radio] {
 	&::before {
 		content: '';
 		display: block;
+		border-radius: 50%;
+
+		background: var(--radio-island_background);
 		inline-size: var(--radio-island_block-size);
 		block-size: var(--radio-island_block-size);
-		border-radius: var(--radio-island_block-size);
-		border: var(--radio-island_border);
-		background: var(--radio-island_background);
-
 		transition: all var(--transition-time);
 	}
 
