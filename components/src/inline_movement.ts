@@ -5,7 +5,10 @@
 // get bounding rectangle of first and last child
 // determine directionality
 
-export const template = `<slot></slot>`;
+export const shadowDom = `<slot></slot>`;
+export const template = `<template>
+	${shadowDom}
+<template>`;
 
 let templateEl = document.createElement("template");
 templateEl.setHTMLUnsafe(template);
@@ -27,28 +30,17 @@ function getSlotElement(el: HTMLElement): HTMLSlotElement | null {
 }
 
 export class InlineMovement extends HTMLElement {
-	static observerdAttributes = ["data-selector"];
-
 	#boundOnSlotChange = this.#onSlotChange.bind(this);
 	#boundOnClick = this.#onClick.bind(this);
 	#boundOnKey = this.#onKey.bind(this);
-	#slot = getSlotElement(this);
 	#computedStyle = window.getComputedStyle(this);
+	#slot = getSlotElement(this);
 
-	#selector = this.getAttribute("selector") ?? ":is(input, button, textarea)";
-	#slotted = getAssignedNodes(this.#slot, this.#selector);
-	#mapped = getMappedElements(this.#slotted);
+	#slotted = new Set<Element>(this.#slot?.assignedElements() ?? []);
 
 	constructor() {
 		super();
 		console.log(this.#slotted);
-		console.log(this.#mapped);
-	}
-
-	attributeChangedCallback(name: string, oldValue: string, newValue: string) {
-		if ("data-selector" === name) {
-			// update the "selected" slots
-		}
 	}
 
 	connectedCallback() {
@@ -64,15 +56,7 @@ export class InlineMovement extends HTMLElement {
 	}
 
 	#onSlotChange(_event: Event) {
-		let selector = this.dataset.selector;
-		if (selector) {
-			for (let el of this.#slot?.assignedElements() ?? []) {
-				el.matches(selector);
-				if (!el.hasAttribute("tabindex"))
-					el.setAttribute("tabindex", "-1");
-			}
-
-		}
+		this.#slotted = new Set(this.#slot?.assignedElements() ?? []);
 	}
 
 	#onKey(event: KeyboardEvent) {
@@ -87,9 +71,21 @@ export class InlineMovement extends HTMLElement {
 		}
 
 		for (let node of event.composedPath()) {
-			if (node instanceof HTMLElement) {
-				let index = this.#mapped.get(node);
-			}
+			if (node === event.currentTarget) return;
+			if (node instanceof Element && this.#slotted.has(node)) {
+				// do something
+				/*
+					ltr
+					left - prevElementSibling
+					right - nextElementSibling
+				
+					rtl
+					left - nextElementSibling
+					right - prevElementSibling
+				*/
+				node.nextElementSibling;
+				node.previousElementSibling;
+			};
 		}
 	}
 
@@ -97,29 +93,40 @@ export class InlineMovement extends HTMLElement {
 		console.log(event);
 
 		for (let node of event.composedPath()) {
-			if (node instanceof HTMLElement) {
-				let index = this.#mapped.get(node);
+			if (!(node instanceof HTMLElement)) continue;
+			if (!this.#slotted.has(node)) continue;
+
+			// check if active element exists in slotted
+			if (
+				document.activeElement && this.#slotted.has(document.activeElement)) {
+				node.setAttribute("tabindex", "-1");
 			}
-		}
+
+			node.setAttribute("tabindex", "0");
+			node.focus();
+		};
 	}
 }
 
-function getAssignedNodes(slot: HTMLSlotElement | null, selector: string | null): Element[] {
-	if (!slot) return [];
-	if (!selector) return slot.assignedElements();
+// function getAssignedNodes(slot: HTMLSlotElement | null, selector: string | null): Element[] {
+// 	if (!slot) return [];
+// 	if (!selector) return slot.assignedElements();
 
-	let elements: Element[] = [];
-	for (let el of slot.assignedElements()) {
-		if (el.matches(selector)) {
-			elements.push(el);
-		}
-	}
+// 	// let elements: Element[] = [];
+// 	// for (let el of slot.assignedElements()) {
+// 	// 	if (el.matches(selector)) {
+// 	// 		elements.push(el);
+// 	// 	}
+// 	// }
 
-	return elements;
-}
+// 	// return elements;
+// }
 
-function getMappedElements(elements: Element[]): WeakMap<Element, number> {
+function getMappedElements(slot: HTMLSlotElement | null): WeakMap<Element, number> {
+	let elements = slot?.assignedElements() ?? [];
 	let map = new WeakMap();
+
+
 	for (const [index, el] of elements.entries()) {
 		map.set(el, index);
 	}

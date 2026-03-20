@@ -8,12 +8,12 @@
 	opacity: 1;
 	cursor: pointer;
 
+	background: var(--checkbox_background);
 	block-size: var(--checkbox_block-size);
 	inline-size: var(--checkbox_block-size);
-	font: var(--checkbox_font);
-	background: var(--checkbox_background);
 	border: var(--checkbox_border);
 	border-radius: var(--checkbox_border-radius);
+	font: var(--checkbox_font);
 	transition: all var(--transition-time);
 
 	&:before {

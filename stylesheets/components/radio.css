@@ -17,12 +17,12 @@
 	/* radio island */
 	&::before {
 		content: '';
+		border-radius: 50%;
 		
 		background: var(--radio-island_background);
 		border: var(--radio-island_border);
 		inline-size: var(--radio-island_block-size);
 		block-size: var(--radio-island_block-size);
-		border-radius: 50%;
 		transition: all var(--transition-time);
 	}
 
@@ -31,18 +31,18 @@
 			border: var(--radio-island_border_checked, var(--radio-island_border));
 			background: var(--radio-island_background_checked, var(--radio-island_background));
 		}
-
-		&:disabled::before {
-			border: var(--radio-island_border_checked_disabled, var(--radio-island_border));
-			background: var(--radio_background_checked_disabled, --radio_background_checked);
-		}
 	}
 
 	&:disabled {
 		cursor: not-allowed;
+		opacity: var(--radio_opacity_disabled, 1);
 
 		background: var(--radio_background_disabled, var(--radio_background));
 		border: var(--radio_border_disabled, var(--radio_border));
-		opacity: var(--radio_opacity_disabled, 1);
+		
+		&:checked {
+			background: var(--radio-island_background_disabled, var(--radio_background));
+			border: var(--radio-island_border_disabled, var(--radio_border));
+		}
 	}
 }
