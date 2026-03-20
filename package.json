@@ -12,11 +12,9 @@
 	"devDependencies": {
 		"@types/node": "^25.3.5",
 		"@w-lfpup/superaction": "^0.2.0",
+		"@w-lfpup/wctk": "^0.1.1",
 		"lightningcss": "^1.31.1",
 		"prettier": "^3.8.1",
 		"typescript": "^5.9.3"
-	},
-	"dependencies": {
-		"@w-lfpup/wctk": "^0.1.1"
 	}
 }
