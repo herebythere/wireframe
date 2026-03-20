@@ -2,32 +2,43 @@
 
 A UI component set for the web.
 
-## CSS only components
+## For developers
+
+Wireframe is delivered as three files:
+- A stylesheet containing all css components
+- A javascript module exporting all web components
+- A json file with template elements for SSR (strings)
+
+All components are RTL (right-to-left) compatible.
+
+## CSS components
 
 A single css stylesheet includes the following components:
 - button
 - checkbox
-- radio
-- switch
-- text inputs
-	- text
-	- password
-	- email
-	- url
+- meter
 - number inputs
 	- number
 	- phone
 	- time
 	- date
 	- datetime-local
-- textarea
-- slider
 - progress
+- radio
+- slider
+- switch
+- textarea
+- text inputs
+	- text
+	- password
+	- email
+	- url
 
 ## Web components
 
-All web components are SSR friendly and their "initial" render is
-available as a `<template>` element as a string of plain html.
-
 The following web components are available:
 - inline movement
+
+## License
+
+Wireframe is released under the BSD 3-Clause License.

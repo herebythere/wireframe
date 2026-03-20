@@ -1,60 +1,76 @@
 /* https://developer.apple.com/design/human-interface-guidelines/buttons */
 
-button[data-wf], input[type=button][data-wf] {
+:is(button[data-wf], button[wf], input[type=button][data-wf], input[type=button][wf]) {
 	appearance: none;
 	cursor: pointer;
 	display: inline-flex;
 	position: relative;
 
-	background: var(--press_background);
-	border-radius: var(--press_border-radius);
-	border: var(--press_border);
-	color: var(--press_color);
-	font: var(--press_font);
+	background: var(--button_background);
+	border-radius: var(--button_border-radius);
+	border: var(--button_border);
+	color: var(--button_color);
+	font: var(--button_font);
 	padding-block: var(--button_padding-block);
 	padding-inline: var(--button_padding-inline);
-	transition: var(--press_transition-time);
+	transition: var(--button_transition-time);
 
 	@media (hover: hover) {
 		&:hover {
-			background: var(--press_background_hover);
-			border: var(--press_border_hover);
-			color: var(--press_color_hover);
+			background: var(--button_background_hover, var(--button_background));
+			border: var(--button_border_hover, var(--button_border));
+			color: var(--button_color_hover, var(--button_color));
 		}
 	}
 
 	&:active {
-		background: var(--press_background_active);
-		border: var(--press_border_active);
-		color: var(--press_color_active);
+		background: var(--button_background_active, var(--button_background));
+		border: var(--button_border_active, var(--button_border));
+		color: var(--button_color_active, var(--button_color));
 	}
 
 	&:disabled {
 		cursor: not-allowed;
 
-		background: var(--press_background_disabled);
-		border: var(--press_border_disabled);
-		color: var(--press_color_disabled);
-		opacity: var(--press_opacity_disabled);
+		background: var(--button_background_disabled, var(--button_background));
+		border: var(--button_border_disabled, var(--button_border));
+		color: var(--button_color_disabled, var(--button_color));
+		opacity: var(--button_opacity_disabled);
 	}
 }
 
-button[data-wf=primary], input[type=button][data-wf=primary] {
-	background: var(--press_background_primary);
-	border: var(--press_border_primary);
-	color: var(--press_color_primary);
+/* all of these should fallback to button stuffs */
+button[data-wf=primary],
+input[type=button][data-wf=primary] {
+	background: var(--primary-button_background);
+	border: var(--primary-button_border);
+	color: var(--primary-button_color);
+
+	/* hover */
+	/* active */
+	/* disabled */
 }
 
-button[data-wf=destructive], input[type=button][data-wf=destructive] {
-	background: var(--press_background_primary);
-	border: var(--press_border_destructive);
-	color: var(--press_color_destructive);
+button[data-wf=destructive],
+input[type=button][data-wf=destructive] {
+	background: var(--desctructive-button_background);
+	border: var(--desctructive-button_border);
+	color: var(--desctructive-button_color);
+
+	/* hover */
+	/* active */
+	/* disabled */
 }
 
-button[data-wf=cancel], input[type=button][data-wf=cancel] {
-	background: var(--press_background_primary);
-	border: var(--press_border_cancel);
-	color: var(--press_color_cancel);
+button[data-wf=cancel],
+input[type=button][data-wf=cancel] {
+	background: var(--cancel-button_background);
+	border: var(--cancel-button_border);
+	color: var(--cancel-button_color);
+
+	/* hover */
+	/* active */
+	/* disabled */
 }
 
 /* system button primary */

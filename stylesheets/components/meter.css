@@ -9,7 +9,6 @@ meter {
 	color: #efefef;
 	border: 2px solid #efefef;
 	block-size: var(--line-height);
-	cursor: pointer;
 	box-shadow: none;
 }
 
