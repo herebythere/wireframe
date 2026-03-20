@@ -109,23 +109,26 @@ function getSibling(event: KeyboardEvent, node: HTMLElement, direction: string):
 		right - prevElementSibling
 	*/
 
+	let prev = node.previousElementSibling;
+	let next = node.nextElementSibling;
+
 	if ("ltr" === direction) {
 		if ("ArrowLeft" === event.key) {
-			if (node.previousElementSibling instanceof HTMLElement) {
-				return node.previousElementSibling;
+			if (prev instanceof HTMLElement) {
+				return prev;
 			}
 		}
 		if ("ArrowRight" === event.key) {
-			if (node.nextElementSibling instanceof HTMLElement) return node.nextElementSibling;
+			if (next instanceof HTMLElement) return next;
 		}
 	}
 
 	if ("rtl" === direction) {
 		if ("ArrowRight" === event.key) {
-			if (node.previousElementSibling instanceof HTMLElement) return node.previousElementSibling;
+			if (prev instanceof HTMLElement) return prev;
 		}
 		if ("ArrowLeft" === event.key) {
-			if (node.nextElementSibling instanceof HTMLElement) return node.nextElementSibling;
+			if (next instanceof HTMLElement) return next;
 		}
 	}
 }
