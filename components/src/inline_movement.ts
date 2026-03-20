@@ -34,30 +34,20 @@ export class InlineMovement extends HTMLElement {
 	}
 
 	#onSlotChange(_event: Event) {
-		this.#mapped = new Set(this.#slot?.assignedElements() ?? []);
+		this.#mapped = new WeakSet(this.#slot?.assignedElements() ?? []);
 	}
 
 	#onKey(event: KeyboardEvent) {
-		if (!this.#slot) return;
 		if (event.defaultPrevented) return;
 		if (event.shiftKey) return;
-		if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return
 
-		for (let node of event.composedPath()) {
-			if (node === event.currentTarget) return;
-			if (!this.#mapped.has(node)) continue;
-
-			let sibling = getSibling(event, node, this.#computedStyle);
-			if (sibling instanceof HTMLElement) {
-				event.preventDefault();
-				setNegativeTabIndices(this.#slot);
-				focusOnElement(sibling);
-			}
-			return;
-		}
+		if (handleBigJumps(event, this.#slot)) return;
+		if (handleArrows(event, this.#slot, this.#mapped, this.#computedStyle)) return;
 	}
 
 	#onClick(event: PointerEvent) {
+		if (event.defaultPrevented) return;
+
 		for (let node of event.composedPath()) {
 			if (node === event.currentTarget) return;
 
@@ -96,6 +86,46 @@ function setNegativeTabIndices(slot: HTMLSlotElement | null) {
 function focusOnElement(sibling: HTMLElement) {
 	sibling.setAttribute("tabindex", "0")
 	sibling.focus();
+}
+
+function handleBigJumps(event: KeyboardEvent, slot: HTMLSlotElement | null): boolean {
+	if ("Home" !== event.key && "End" !== event.key) return false;
+
+	let bigJump = getFirstOrLast(event, slot);
+	if (bigJump instanceof HTMLElement) {
+			event.preventDefault();
+			setNegativeTabIndices(slot);
+			focusOnElement(bigJump);
+	}
+
+	return true;
+}
+
+function handleArrows(event: KeyboardEvent, slot: HTMLSlotElement | null, mapped: WeakSet<EventTarget>, computedStyle: CSSStyleDeclaration) {
+	if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return false;
+
+	for (let node of event.composedPath()) {
+		if (node === event.currentTarget) return;
+		if (!mapped.has(node)) continue;
+
+		let sibling = getSibling(event, node, computedStyle);
+		if (sibling instanceof HTMLElement) {
+			event.preventDefault();
+			setNegativeTabIndices(slot);
+			focusOnElement(sibling);
+		}
+		break;
+	}
+
+	return true;
+}
+
+function getFirstOrLast(event: KeyboardEvent, slot: HTMLSlotElement | null): Element | undefined {
+	if (!slot) return;
+
+	let elements = slot.assignedElements();
+	if ("Home" === event.key) return elements[0];
+	if ("End" === event.key) return elements[elements.length - 1];
 }
 
 function getSibling(event: KeyboardEvent, node: EventTarget, computedStyle: CSSStyleDeclaration): Element | null | undefined {
