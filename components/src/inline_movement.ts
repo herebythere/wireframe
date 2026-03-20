@@ -50,9 +50,9 @@ export class InlineMovement extends HTMLElement {
 
 		for (let node of event.composedPath()) {
 			if (node === event.currentTarget) return;
-
 			if (!this.#mapped.has(node)) continue;
-			if (!(node instanceof HTMLElement)) continue;
+
+			if (!(node instanceof HTMLElement)) return;
 
 			event.preventDefault();
 			setNegativeTabIndices(this.#slot);
@@ -84,7 +84,7 @@ function setNegativeTabIndices(slot: HTMLSlotElement | null) {
 }
 
 function focusOnElement(sibling: HTMLElement) {
-	sibling.setAttribute("tabindex", "0")
+	sibling.setAttribute("tabindex", "0");
 	sibling.focus();
 }
 
