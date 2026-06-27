@@ -1,16 +1,18 @@
+/* border width and border color is separate */
+
 :is(input[type=checkbox][data-wf], input[type=checkbox][wf]):not([role=switch]) {
 	appearance: none;
 	position: relative;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 	color: transparent;
 	opacity: 1;
-	cursor: pointer;
 
-	background: var(--checkbox_background);
 	block-size: var(--checkbox_block-size);
 	inline-size: var(--checkbox_block-size);
+	background: var(--checkbox_background);
 	border: var(--checkbox_border);
 	border-radius: var(--checkbox_border-radius);
 	font: var(--checkbox_font);
@@ -22,7 +24,6 @@
 
 	&:checked {
 		color: var(--checkbox_color);
-		border: var(--checkbox_border_checked, var(--checkbox_border));
 		background: var(--checkbox_background_checked, var(--checkbox_background));
 	}
 

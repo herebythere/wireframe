@@ -38,8 +38,33 @@
 
 	/* checkbox */
 	--checkbox_block-size: 1.5rem;
-	--checkbox_check_color: var(--color-inverted-wf);
-	--checkbox_check_background: var(--color-wf);
+	--checkbox-background: var(--color);
+	--checkbox-border-color: blue;
+	--checkbox-border-width: 1px;
+	--checkbox-border-radius: 4px;
+	--checkbox-font: sans-serif;
+	--checkbox_color: var(--color-inverted-wf);
+	--checkbox_background_checked: var(--color-wf);
+	--checkbox_color_disabled: var(--color-inverted-wf);
+	--checkbox_background_disabled: var(--color-wf);
+	--checkbox_opacity_disabled: 1;
+
+	/* radio */
+	--radio_block-size: 1.5rem;
+	--radio_background: var(--color);
+	--radio-border-color: blue;
+	--radio-border-width: 1px;
+	--radio-background-disabled: blue;
+	--radio-border-color-disabled: blue;
+
+	/* radio island */
+	--radio-island_block-size: 1.5rem;
+	--radio-island_color: var(--color-inverted-wf);
+	--radio-island_border-color: var(--color-wf);
+	--radio-island_background: var(--color-wf);
+	--radio-island_border_disabled: 1;
+	--radio-island_background_disabled: 1;
+	--radio-island_opacity_disabled: 1;
 
 	/* switch / toggle */
 	--switch_inline-size: ;

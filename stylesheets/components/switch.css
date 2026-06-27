@@ -22,6 +22,8 @@
 		transition: all var(--transition-time);
 	}
 
+	/* needs border width could just use border width border color border: --border-width solid --border-color */
+
 	/* switch island */
 	&::after {
 		position: relative;
