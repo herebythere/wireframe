@@ -1,23 +1,15 @@
 // https://developer.mozilla.org/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets#using_tabindex
-
-// correlates to start and end
-
-// get bounding rectangle of first and last child
-// determine directionality
-
-export const shadowDom = `<slot></slot>`;
-export const template = `<template>
-	${shadowDom}
-<template>`;
+// https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/
 
 let templateEl = document.createElement("template");
-templateEl.setHTMLUnsafe(shadowDom);
+templateEl.setHTMLUnsafe("<slot></slot>");
+
+// <template shadowrootmode=open><slot></slot></template>
 
 export class InlineMovement extends HTMLElement {
 	#boundOnSlotChange = this.#onSlotChange.bind(this);
 	#boundOnClick = this.#onClick.bind(this);
 	#boundOnKey = this.#onKey.bind(this);
-	#computedStyle = window.getComputedStyle(this);
 	#slot = getSlotElement(this);
 	#mapped = new WeakSet<EventTarget>(this.#slot?.assignedElements() ?? []);
 
@@ -39,10 +31,10 @@ export class InlineMovement extends HTMLElement {
 
 	#onKey(event: KeyboardEvent) {
 		if (event.defaultPrevented) return;
-		if (event.shiftKey) return;
+		if (event.shiftKey || event.altKey) return;
 
 		if (handleBigJumps(event, this.#slot)) return;
-		if (handleArrows(event, this.#slot, this.#mapped, this.#computedStyle)) return;
+		if (handleArrows(event, this.#slot, this.#mapped, window.getComputedStyle(this))) return;
 	}
 
 	#onClick(event: PointerEvent) {
@@ -70,7 +62,7 @@ function getSlotElement(el: HTMLElement): HTMLSlotElement | null {
 		: el.attachShadow({ mode: "closed" });
 
 	if (!ssr)
-		shadowRoot.appendChild(document.importNode(templateEl.content, true));
+		shadowRoot.appendChild(templateEl.content.cloneNode(true));
 
 	return shadowRoot.querySelector("slot");
 }

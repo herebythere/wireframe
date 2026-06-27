@@ -1,12 +1,12 @@
 :is(input[type=radio][data-wf], input[type=radio][wf]) {
 	appearance: none;
-	position: relative;
-	display: inline-flex;
-	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
 	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
 	opacity: 1;
+	position: relative;
 
 	border: var(--radio_border);
 	background: var(--radio_background);

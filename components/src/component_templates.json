@@ -1,0 +1,3 @@
+{
+	"inline-movement": "<template shadowrootmode=open><slot></slot></template>"
+}
