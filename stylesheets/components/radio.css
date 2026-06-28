@@ -1,4 +1,4 @@
-:is(input[type=radio]) {
+:is(input[type="radio"]) {
 	appearance: none;
 	align-items: center;
 	border-radius: 50%;
@@ -16,9 +16,9 @@
 
 	/* radio island */
 	&::before {
-		content: '';
+		content: "";
 		border-radius: 50%;
-		
+
 		background: var(--radio-island_background);
 		border: var(--radio-island_border);
 		inline-size: var(--radio-island_block-size);
@@ -28,8 +28,14 @@
 
 	&:checked {
 		&::before {
-			border: var(--radio-island_border_checked, var(--radio-island_border));
-			background: var(--radio-island_background_checked, var(--radio-island_background));
+			border: var(
+				--radio-island_border_checked,
+				var(--radio-island_border)
+			);
+			background: var(
+				--radio-island_background_checked,
+				var(--radio-island_background)
+			);
 		}
 	}
 

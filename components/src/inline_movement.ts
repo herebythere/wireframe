@@ -34,7 +34,15 @@ export class InlineMovement extends HTMLElement {
 		if (event.shiftKey || event.altKey) return;
 
 		if (handleBigJumps(event, this.#slot)) return;
-		if (handleArrows(event, this.#slot, this.#mapped, window.getComputedStyle(this))) return;
+		if (
+			handleArrows(
+				event,
+				this.#slot,
+				this.#mapped,
+				window.getComputedStyle(this),
+			)
+		)
+			return;
 	}
 
 	#onClick(event: PointerEvent) {
@@ -50,7 +58,7 @@ export class InlineMovement extends HTMLElement {
 			setNegativeTabIndices(this.#slot);
 			focusOnElement(node);
 			return;
-		};
+		}
 	}
 }
 
@@ -61,8 +69,7 @@ function getSlotElement(el: HTMLElement): HTMLSlotElement | null {
 		? internals.shadowRoot
 		: el.attachShadow({ mode: "closed" });
 
-	if (!ssr)
-		shadowRoot.appendChild(templateEl.content.cloneNode(true));
+	if (!ssr) shadowRoot.appendChild(templateEl.content.cloneNode(true));
 
 	return shadowRoot.querySelector("slot");
 }
@@ -80,20 +87,28 @@ function focusOnElement(sibling: HTMLElement) {
 	sibling.focus();
 }
 
-function handleBigJumps(event: KeyboardEvent, slot: HTMLSlotElement | null): boolean {
+function handleBigJumps(
+	event: KeyboardEvent,
+	slot: HTMLSlotElement | null,
+): boolean {
 	if ("Home" !== event.key && "End" !== event.key) return false;
 
 	let bigJump = getFirstOrLast(event, slot);
 	if (bigJump instanceof HTMLElement) {
-			event.preventDefault();
-			setNegativeTabIndices(slot);
-			focusOnElement(bigJump);
+		event.preventDefault();
+		setNegativeTabIndices(slot);
+		focusOnElement(bigJump);
 	}
 
 	return true;
 }
 
-function handleArrows(event: KeyboardEvent, slot: HTMLSlotElement | null, mapped: WeakSet<EventTarget>, computedStyle: CSSStyleDeclaration) {
+function handleArrows(
+	event: KeyboardEvent,
+	slot: HTMLSlotElement | null,
+	mapped: WeakSet<EventTarget>,
+	computedStyle: CSSStyleDeclaration,
+) {
 	if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return false;
 
 	for (let node of event.composedPath()) {
@@ -112,7 +127,10 @@ function handleArrows(event: KeyboardEvent, slot: HTMLSlotElement | null, mapped
 	return true;
 }
 
-function getFirstOrLast(event: KeyboardEvent, slot: HTMLSlotElement | null): Element | undefined {
+function getFirstOrLast(
+	event: KeyboardEvent,
+	slot: HTMLSlotElement | null,
+): Element | undefined {
 	if (!slot) return;
 
 	let elements = slot.assignedElements();
@@ -120,7 +138,11 @@ function getFirstOrLast(event: KeyboardEvent, slot: HTMLSlotElement | null): Ele
 	if ("End" === event.key) return elements[elements.length - 1];
 }
 
-function getSibling(event: KeyboardEvent, node: EventTarget, computedStyle: CSSStyleDeclaration): Element | null | undefined {
+function getSibling(
+	event: KeyboardEvent,
+	node: EventTarget,
+	computedStyle: CSSStyleDeclaration,
+): Element | null | undefined {
 	if (!(node instanceof HTMLElement)) return;
 
 	let prev = node.previousElementSibling;

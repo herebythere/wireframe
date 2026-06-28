@@ -17,7 +17,10 @@
 
 	@media (hover: hover) {
 		&:hover {
-			background: var(--button_background_hover, var(--button_background));
+			background: var(
+				--button_background_hover,
+				var(--button_background)
+			);
 			border: var(--button_border_hover, var(--button_border));
 			color: var(--button_color_hover, var(--button_color));
 		}
@@ -37,7 +40,7 @@
 }
 
 /* all of these should fallback to button stuffs */
-button[data-wf=primary] {
+button[data-wf="primary"] {
 	background: var(--primary-button_background);
 	border: var(--primary-button_border);
 	color: var(--primary-button_color);
@@ -55,10 +58,9 @@ button[data-wf=primary] {
 		border: var(--primary-button_border_active);
 		color: var(--primary-button_color_active);
 	}
-
 }
 
-button[data-wf=destructive] {
+button[data-wf="destructive"] {
 	background: var(--desctructive-button_background);
 	border: var(--desctructive-button_border);
 	color: var(--desctructive-button_color);
@@ -76,10 +78,9 @@ button[data-wf=destructive] {
 		border: var(--destructive-button_border_active);
 		color: var(--destructive-button_color_active);
 	}
-
 }
 
-button[data-wf=cancel] {
+button[data-wf="cancel"] {
 	background: var(--cancel-button_background);
 	border: var(--cancel-button_border);
 	color: var(--cancel-button_color);

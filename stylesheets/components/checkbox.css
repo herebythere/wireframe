@@ -1,6 +1,6 @@
 /* border width and border color is separate */
 
-:is(input[type=checkbox]):not([role=switch]) {
+:is(input[type="checkbox"]):not([role="switch"]) {
 	appearance: none;
 	position: relative;
 	display: inline-flex;
@@ -19,16 +19,19 @@
 	transition: all var(--transition-time);
 
 	&:before {
-		content: var(--checkbox_content_checked, '\2714');
+		content: var(--checkbox_content_checked, "\2714");
 	}
 
 	&:checked {
 		color: var(--checkbox_color);
-		background: var(--checkbox_background_checked, var(--checkbox_background));
+		background: var(
+			--checkbox_background_checked,
+			var(--checkbox_background)
+		);
 	}
 
 	&:indeterminate::before {
-		content: var(--checkbox_content_indeterminate, '\2014');
+		content: var(--checkbox_content_indeterminate, "\2014");
 	}
 
 	&:disabled {

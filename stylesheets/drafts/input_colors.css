@@ -1,5 +1,5 @@
 /* places for fonts and line heights */
-input[type=color] {
+input[type="color"] {
 	appearance: none;
 	border: var(--press_border);
 	border-radius: var(--press_border-radius);
@@ -7,9 +7,12 @@ input[type=color] {
 
 	cursor: pointer;
 
-	&:hover {}
-	&:focus {}
-	&:active {}
+	&:hover {
+	}
+	&:focus {
+	}
+	&:active {
+	}
 	&:disabled {
 		cursor: not-allowed;
 	}

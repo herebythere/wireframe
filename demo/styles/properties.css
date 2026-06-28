@@ -5,14 +5,14 @@
 	--text-color-wf: light-dark(#3e3e3e, #e9e9e9);
 
 	--color-inverted-wf: light-dark(#f9f9f9, #3e3e3e);
-	--font-family-wf: "SF Pro", "San Francisco", "Roboto Flex", "Segoe UI Variable", Helvetica, sans-serif;
-
+	--font-family-wf:
+		"SF Pro", "San Francisco", "Roboto Flex", "Segoe UI Variable",
+		Helvetica, sans-serif;
 
 	/* general */
 	--transition-time: 500ms;
 	--color: var(--color-wf);
 	--line-height: 2rem;
-
 
 	/* BUTTON */
 	--button_border: 2px solid var(--color-wf);
@@ -37,7 +37,6 @@
 	--button_color_disabled: 0.5rem;
 	--button_opacity_disabled: 0.5;
 
-
 	/* CHECKBOX */
 	--checkbox_block-size: 1.5rem;
 	--checkbox_border: 2px solid var(--color-wf);
@@ -46,13 +45,12 @@
 	--checkbox_color: var(--color-inverted-wf);
 
 	--checkbox_background_checked: var(--color-wf);
-	--checkbox_content_checked: '\2714';
-	--checkbox_content_indeterminate: '\2014';
+	--checkbox_content_checked: "\2714";
+	--checkbox_content_indeterminate: "\2014";
 
 	--checkbox_border_disabled: 2px solid var(--color-wf);
 	--checkbox_background_disabled: var(--color-wf);
 	--checkbox_color_disabled: ;
-
 
 	/* SWITCH / TOGGLE */
 	--switch_inline-size: 3rem;
@@ -71,11 +69,10 @@
 
 	--switch-island_inline-size_checked: 1rem;
 	--switch-island_block-size_checked: 1rem;
-	--switch-island_content_checked: '\2714';
+	--switch-island_content_checked: "\2714";
 	--switch-island_border_checked: 2px solid var(--color-wf);
 	--switch-island_color_checked: var(--color-inverted-wf);
 	--switch-island_background_checked: var(--color-wf);
-
 
 	/* RADIO */
 	--radio_border: 2px solid var(--color-wf);
@@ -88,7 +85,6 @@
 
 	--radio-island_border_checked: none;
 	--radio-island_background_checked: var(--color-wf);
-
 
 	/* TEXT INPUT (general keyboard input) */
 	--text-input_color: var(--color-wf);
@@ -106,7 +102,6 @@
 	--text-input_border-end-end-radius: ;
 	--text-input_padding-inline: 1lh;
 	--text-input_padding-block: 0.5lh;
-
 
 	/* text disabled */
 	--text-input_background_disabled: ;

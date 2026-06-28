@@ -1,5 +1,5 @@
 .outline {
-    outline: var(--outline);
+	outline: var(--outline);
 	outline-offset: var(--outline-offset);
 
 	@media (hover: hover) {
@@ -7,7 +7,7 @@
 			outline: var(--outline_hover);
 			outline-offset: var(--outline-offset_hover);
 		}
-		
+
 		&:active {
 			outline: var(--outline_active);
 			outline-offset: var(--outline-offset_active);
@@ -21,12 +21,12 @@
 
 	&:disabled {
 		outline: var(--outline);
-		outline-offset: var(--outline-offset);		
+		outline-offset: var(--outline-offset);
 	}
 }
 
 .text-outline {
-    outline: var(--outline);
+	outline: var(--outline);
 	outline-offset: var(--outline-offset);
 
 	@media (hover: hover) {
@@ -48,6 +48,6 @@
 
 	&:disabled {
 		outline: var(--outline);
-		outline-offset: var(--outline-offset);		
+		outline-offset: var(--outline-offset);
 	}
 }

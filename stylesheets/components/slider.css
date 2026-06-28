@@ -1,4 +1,4 @@
-input[type=range] {
+input[type="range"] {
 	-webkit-appearance: none;
 	appearance: none;
 	background: var(--color-wf);
@@ -8,13 +8,13 @@ input[type=range] {
 	cursor: pointer;
 }
 
-input[type=range]::-ms-track {
+input[type="range"]::-ms-track {
 	width: 100%;
 	margin: 0;
 	cursor: pointer;
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	border: 2px solid var(--color-wf);
 	position: relative;
@@ -24,7 +24,7 @@ input[type=range]::-webkit-slider-thumb {
 	background: var(--color-inverted-wf);
 }
 
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
 	appearance: none;
 	-moz-appearance: none;
 	border: 2px solid var(--color-wf);

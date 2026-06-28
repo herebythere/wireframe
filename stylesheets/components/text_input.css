@@ -1,8 +1,13 @@
 /* places for fonts and line heights */
-:is(input[type=text], input[type=password], input[type=email], input[type=url]) {
+:is(
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="url"]
+) {
 	appearance: none;
 	position: relative;
-	display:inline-flex;
+	display: inline-flex;
 	cursor: initial;
 
 	transition: all var(--transition-time);
@@ -27,11 +32,11 @@
 		outline: none;
 		cursor: initial;
 	}
-	
+
 	&:disabled {
 		cursor: not-allowed;
 
-		opacity: var(--opacity_disabled);	
+		opacity: var(--opacity_disabled);
 	}
 
 	&::placeholder {

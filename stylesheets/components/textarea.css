@@ -3,7 +3,7 @@ textarea {
 	appearance: none;
 	cursor: pointer;
 	min-inline-size: 225px;
-	
+
 	border-end-end-radius: 0;
 	resize: none;
 
@@ -12,7 +12,10 @@ textarea {
 	padding-block: var(--text-input_padding-block);
 	padding-inline: var(--text-input_padding-inline);
 	border: var(--text-input_border);
-	border-inline-start: var(--text-input_border-bottom, var(--text-input_border));
+	border-inline-start: var(
+		--text-input_border-bottom,
+		var(--text-input_border)
+	);
 	border-block-end: var(--text-input_border-bottom, var(--text-input_border));
 	border-radius: var(--text-input_border-radius);
 	background: var(--text-input_background);
@@ -29,11 +32,11 @@ textarea {
 		outline: none;
 		cursor: initial;
 	}
-	
+
 	&:disabled {
 		cursor: not-allowed;
 
-		opacity: var(--opacity_disabled);	
+		opacity: var(--opacity_disabled);
 	}
 
 	&::placeholder {

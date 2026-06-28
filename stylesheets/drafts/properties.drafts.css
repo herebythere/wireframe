@@ -5,15 +5,17 @@
 	--baseline-grid-color: light-dark(#cfcfcf, #787878);
 
 	/* Root */
-	--background: light-dark(#f9f9f9, #17181A);
-	--background_inverted: light-dark(#17181A, #efefef);
+	--background: light-dark(#f9f9f9, #17181a);
+	--background_inverted: light-dark(#17181a, #efefef);
 
 	/* animation tempo */
 	--transition-time: 250ms;
 
 	/* Typography */
 	--line-height: 2rem;
-	--font-family: "SF Pro", "San Francisco", "Roboto Flex", "Segoe UI Variable", Helvetica, sans-serif;
+	--font-family:
+		"SF Pro", "San Francisco", "Roboto Flex", "Segoe UI Variable",
+		Helvetica, sans-serif;
 	--color: light-dark(#3e3e3e, #f9f9f9);
 	--color_inverted: light-dark(#f9f9f9, #3e3e3e);
 	--font: 400 1rem/var(--line-height) var(--font-family);
@@ -29,7 +31,7 @@
 	--h5_color: var(--color);
 	--h6_font: 700 1.5rem/2rem var(--font-family);
 	--h6_color: var(--color);
-	
+
 	/* Focus & Selection */
 	--selection_background-color: light-dark(cornflowerblue, cornflowerblue);
 	--selection_color: light-dark(white, black);
@@ -53,8 +55,8 @@
 	--press_font: 400 0.9rem/1rem var(--font-family);
 	--press_box-shadow: none;
 
-	--press_content_checked: '\2714';
-	--press_content_indeterminate: '\2014';
+	--press_content_checked: "\2714";
+	--press_content_indeterminate: "\2014";
 
 	--press_background_hover: var(--background);
 	--press_color_hover: var(--color);
@@ -63,17 +65,20 @@
 
 	--press_background_active: var(--background);
 	--press_color_active: var(--color);
-	--press_border_active: var(--press_border-width) solid light-dark(black, white);
+	--press_border_active: var(--press_border-width) solid
+		light-dark(black, white);
 	--press_box-shadow_active: none;
 
 	--press_background_checked: light-dark(black, white);
 	--press_color_checked: var(--color);
-	--press_border_checked: var(--press_border-width) solid light-dark(black, white);
+	--press_border_checked: var(--press_border-width) solid
+		light-dark(black, white);
 	--press_box-shadow_checked: none;
 
 	--press_background_diabled: light-dark(black, white);
 	--press_color_disabled: var(--color);
-	--press_border_disabled: var(--press_border-width) solid light-dark(black, white);
+	--press_border_disabled: var(--press_border-width) solid
+		light-dark(black, white);
 	--press_box-shadow_disabled: none;
 
 	/* submit button */
@@ -86,13 +91,12 @@
 	--radio-island_block-size: 1rem;
 	--radio-island_background: black;
 	--radio-island_color: white;
-	--radio-island_content: '';
+	--radio-island_content: "";
 	--radio-island_border: var(--press_border);
 	--radio-island_box-shadow: var(var(--press_box-shadow));
 
 	/* -webkit-text-stroke */
 	/* text-shadow */
-
 
 	/* Buttons */
 	--button_font: 700 0.9rem/0.9rem var(--font-family);
@@ -108,7 +112,7 @@
 
 	/* Text inputs */
 	--text-input_font: 400 1rem/var(--line-height) var(--font-family)
-	--text-input_background: light-dark(white, black);
+		--text-input_background: light-dark(white, black);
 	--text-input_border: 2px solid light-dark(black, white);
 
 	--text-input_border-bottom: 2px solid light-dark(black, white);
@@ -117,10 +121,9 @@
 	--text-input_border-radius: 1px;
 	--text-input_border-radius-bottom: 1px;
 
-
 	/* Number inputs */
 	--number-input_font: 400 1rem/var(--line-height) var(--font-family)
-	--number-input_background: light-dark(white, black);
+		--number-input_background: light-dark(white, black);
 	--number-input_border: 2px solid light-dark(black, white);
 	--number-input_border-bottom: 2px solid light-dark(black, white);
 	--number-input_padding-inline: 0.5rem;
@@ -129,5 +132,4 @@
 	--number-input_border-radius-bottom: 1px;
 
 	/* Select */
-
 }
