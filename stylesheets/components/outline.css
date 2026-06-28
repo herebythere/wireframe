@@ -1,3 +1,5 @@
+/* MAYBE */
+
 .outline {
 	outline: var(--outline);
 	outline-offset: var(--outline-offset);

@@ -8,7 +8,6 @@
 	align-items: center;
 	cursor: pointer;
 	color: transparent;
-	opacity: 1;
 
 	block-size: var(--checkbox_block-size);
 	inline-size: var(--checkbox_block-size);
@@ -24,6 +23,7 @@
 
 	&:checked {
 		color: var(--checkbox_color_checked);
+		border-color: var(--checkbox_border-color_checked);
 		background: var(
 			--checkbox_background_checked,
 			var(--checkbox_background)
