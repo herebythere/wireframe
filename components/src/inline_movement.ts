@@ -4,14 +4,16 @@
 let templateEl = document.createElement("template");
 templateEl.setHTMLUnsafe("<slot></slot>");
 
-// <template shadowrootmode=open><slot></slot></template>
+// You don't need a DSD template because interactivity needs JS.
+// So a slot will load when the component will load.
+// 
 
 export class InlineMovement extends HTMLElement {
+	#slot = getSlotElement(this);
+	#mapped = new WeakSet<EventTarget>(this.#slot?.assignedElements() ?? []);
 	#boundOnSlotChange = this.#onSlotChange.bind(this);
 	#boundOnClick = this.#onClick.bind(this);
 	#boundOnKey = this.#onKey.bind(this);
-	#slot = getSlotElement(this);
-	#mapped = new WeakSet<EventTarget>(this.#slot?.assignedElements() ?? []);
 
 	connectedCallback() {
 		this.#slot?.addEventListener("slotchange", this.#boundOnSlotChange);
@@ -63,13 +65,8 @@ export class InlineMovement extends HTMLElement {
 }
 
 function getSlotElement(el: HTMLElement): HTMLSlotElement | null {
-	let internals = el.attachInternals();
-	let ssr = null !== internals.shadowRoot;
-	let shadowRoot = internals.shadowRoot
-		? internals.shadowRoot
-		: el.attachShadow({ mode: "closed" });
-
-	if (!ssr) shadowRoot.appendChild(templateEl.content.cloneNode(true));
+	let shadowRoot = el.attachShadow({ mode: "closed" });
+	shadowRoot.appendChild(templateEl.content.cloneNode(true));
 
 	return shadowRoot.querySelector("slot");
 }

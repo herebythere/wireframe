@@ -36,6 +36,8 @@ A single css stylesheet includes the following components:
     - email
     - url
 
+- :focus ring
+
 ## Web components
 
 The following web components are available:

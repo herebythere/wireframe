@@ -10,11 +10,11 @@ let targetCssPathInput = process.argv[3];
 let cwd = process.cwd();
 
 // odd way of handling this ../../../ for two dirs / and a file
-let originCssPath = path.join(cwd, originCssPathInput);
+let filename = path.join(cwd, originCssPathInput);
 let targetCssPath = path.join(cwd, targetCssPathInput);
 
-let { code, map } = bundle({
-	filename: originCssPath,
+let { code } = bundle({
+	filename,
 });
 
 try {

@@ -31,10 +31,14 @@
 	--checkbox_border-width: 1px;
 	--checkbox_border-radius: 4px;
 	--checkbox_font: sans-serif;
+	--checkbox_content_checked: "\2714";
+	--checkbox_content_indeterminate: "\2014";
 	/* colors */
 	--checkbox_background: var(--color);
+	--checkbox_background_checked: var(--color);
 	--checkbox_border-color: blue;
-	--checkbox_color: var(--color-inverted-wf);
+	--checkbox_border-color_checked: var(--color);
+	--checkbox_color_checked: var(--color-inverted-wf);
 
 	/* radio */
 	--radio_block-size: 1.5rem;
