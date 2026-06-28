@@ -1,6 +1,6 @@
 /* https://developer.apple.com/design/human-interface-guidelines/buttons */
 
-:is(button, input[type=button]) {
+:is(button) {
 	appearance: none;
 	cursor: pointer;
 	display: inline-flex;
@@ -37,8 +37,7 @@
 }
 
 /* all of these should fallback to button stuffs */
-button[data-wf=primary],
-input[type=button][data-wf=primary] {
+button[data-wf=primary] {
 	background: var(--primary-button_background);
 	border: var(--primary-button_border);
 	color: var(--primary-button_color);
@@ -59,8 +58,7 @@ input[type=button][data-wf=primary] {
 
 }
 
-button[data-wf=destructive],
-input[type=button][data-wf=destructive] {
+button[data-wf=destructive] {
 	background: var(--desctructive-button_background);
 	border: var(--desctructive-button_border);
 	color: var(--desctructive-button_color);
@@ -81,8 +79,7 @@ input[type=button][data-wf=destructive] {
 
 }
 
-button[data-wf=cancel],
-input[type=button][data-wf=cancel] {
+button[data-wf=cancel] {
 	background: var(--cancel-button_background);
 	border: var(--cancel-button_border);
 	color: var(--cancel-button_color);
