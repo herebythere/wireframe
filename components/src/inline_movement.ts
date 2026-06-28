@@ -6,7 +6,7 @@ templateEl.setHTMLUnsafe("<slot></slot>");
 
 // You don't need a DSD template because interactivity needs JS.
 // So a slot will load when the component will load.
-// 
+//
 
 export class InlineMovement extends HTMLElement {
 	#slot = getSlotElement(this);
