@@ -34,9 +34,7 @@
 	&:disabled {
 		cursor: not-allowed;
 
-		background: var(--text-input_background_disabled);
-		border: var(--text-input_border_disabled);
-		opacity: var(--text-input_opacity_disabled);	
+		opacity: var(--opacity_disabled);	
 	}
 
 	&::placeholder {

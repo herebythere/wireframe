@@ -69,13 +69,6 @@
 	&:disabled {
 		cursor: not-allowed;
 
-		background: var(--switch_background_disabled);
-		border: var(--switch_border_disabled);
-		opacity: var(--switch_opacity_disabled);
-
-		&::after {
-			border: var(--switch-island_border_disabled, var(--switch-island_border));
-			background: var(--switch-island_background_disabled, var(--switch-island_background));
-		}
+		opacity: var(--opacity_disabled);
 	}
 }

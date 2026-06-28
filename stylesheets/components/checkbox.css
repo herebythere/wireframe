@@ -1,6 +1,6 @@
 /* border width and border color is separate */
 
-:is(input[type=checkbox][data-wf], input[type=checkbox][wf]):not([role=switch]) {
+:is(input[type=checkbox]):not([role=switch]) {
 	appearance: none;
 	position: relative;
 	display: inline-flex;
@@ -34,6 +34,6 @@
 	&:disabled {
 		cursor: not-allowed;
 
-		opacity: var(--checkbox_opacity_disabled, 1);
+		opacity: var(--opacity_disabled, 1);
 	}
 }

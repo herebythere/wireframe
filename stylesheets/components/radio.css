@@ -1,4 +1,4 @@
-:is(input[type=radio][data-wf], input[type=radio][wf]) {
+:is(input[type=radio]) {
 	appearance: none;
 	align-items: center;
 	border-radius: 50%;
@@ -9,9 +9,9 @@
 	position: relative;
 
 	border: var(--radio_border);
-	background: var(--radio_background);
 	block-size: var(--radio_block-size);
 	inline-size: var(--radio_block-size);
+	background: var(--radio_background);
 	transition: all var(--transition-time);
 
 	/* radio island */
@@ -35,14 +35,7 @@
 
 	&:disabled {
 		cursor: not-allowed;
-		opacity: var(--radio_opacity_disabled, 1);
 
-		background: var(--radio_background_disabled, var(--radio_background));
-		border: var(--radio_border_disabled, var(--radio_border));
-		
-		&:checked {
-			background: var(--radio-island_background_disabled, var(--radio_background));
-			border: var(--radio-island_border_disabled, var(--radio_border));
-		}
+		opacity: var(--opacity_disabled, 1);
 	}
 }

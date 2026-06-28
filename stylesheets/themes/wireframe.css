@@ -17,6 +17,7 @@
 	--transition-time: 150ms;
 	--color: var(--color-wf);
 	--line-height: 2rem;
+	--opacity_disabled: 1;
 
 
 	/* button */
@@ -39,17 +40,12 @@
 	--radio_border-width: 1px;
 	--radio_background: var(--color);
 	--radio_border-color: blue;
-	--radio_background-disabled: blue;
-	--radio_border-color-disabled: blue;
 
 	/* radio island */
 	--radio-island_block-size: 1.5rem;
 	--radio-island_color: var(--color-inverted-wf);
 	--radio-island_border-color: var(--color-wf);
 	--radio-island_background: var(--color-wf);
-	--radio-island_border_disabled: 1;
-	--radio-island_background_disabled: 1;
-	--radio-island_opacity_disabled: 1;
 
 	/* switch / toggle */
 	--switch-inline_size: ;
