@@ -3,9 +3,9 @@ textarea {
 	appearance: none;
 	cursor: pointer;
 	min-inline-size: 225px;
-
 	border-end-end-radius: 0;
 	resize: none;
+	outline: none;
 
 	font: var(--text-input_font);
 	min-block-size: calc(var(--line-height) * 2);
@@ -19,12 +19,6 @@ textarea {
 	border-block-end: var(--text-input_border-bottom, var(--text-input_border));
 	border-radius: var(--text-input_border-radius);
 	background: var(--text-input_background);
-
-	/* needs to be a parameter */
-
-	outline: none;
-	/* opinionated */
-	field-sizing: content;
 
 	transition: all var(--transition-time);
 

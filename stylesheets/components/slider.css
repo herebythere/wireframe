@@ -3,7 +3,8 @@ input[type="range"] {
 	appearance: none;
 	background: var(--color-wf);
 	margin: 0;
-	block-size: 2px;
+	padding-block: calc(1rem - 2px);
+	block-size: 20px;
 	min-width: 200px;
 	cursor: pointer;
 }
@@ -11,6 +12,7 @@ input[type="range"] {
 input[type="range"]::-ms-track {
 	width: 100%;
 	margin: 0;
+	padding: 1rem;
 	cursor: pointer;
 }
 

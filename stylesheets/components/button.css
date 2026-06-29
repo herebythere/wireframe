@@ -8,28 +8,25 @@
 
 	background: var(--button_background);
 	border-radius: var(--button_border-radius);
-	border: var(--button_border);
+	border: var(--button_border-width) solid var(--button_border-color);
 	color: var(--button_color);
 	font: var(--button_font);
 	padding-block: var(--button_padding-block);
 	padding-inline: var(--button_padding-inline);
-	transition: var(--button_transition-time);
+	transition: var(--transition-time);
 
 	@media (hover: hover) {
 		&:hover {
-			background: var(
-				--button_background_hover,
-				var(--button_background)
-			);
-			border: var(--button_border_hover, var(--button_border));
-			color: var(--button_color_hover, var(--button_color));
+			background: var(--button_background_hover);
+			border: var(--button_border-width) solid var(--button_border-color_hover);
+			color: var(--button_color_hover);
 		}
 	}
 
 	&:active {
-		background: var(--button_background_active, var(--button_background));
-		border: var(--button_border_active, var(--button_border));
-		color: var(--button_color_active, var(--button_color));
+		background: var(--button_background_active);
+		border: var(--button_border-width) solid var(--button_border-color_active);
+		color: var(--button_color_active);
 	}
 
 	&:disabled {
@@ -37,65 +34,45 @@
 
 		opacity: var(--opacity_disabled);
 	}
-}
 
-/* all of these should fallback to button stuffs */
-button[data-wf="primary"] {
-	background: var(--primary-button_background);
-	border: var(--primary-button_border);
-	color: var(--primary-button_color);
+	&:is([data-wf="primary"]) {
+		background: var(--primary-button_background);
+		border-color: var(--primary-button_border-color);
+		color: var(--primary-button_color);
 
-	@media (hover: hover) {
-		&:hover {
-			background: var(--primary-button_background_hover);
-			border: var(--primary-button_border_hover);
-			color: var(--primary-button_color_hover);
+		@media (hover: hover) {
+			&:hover {
+				background: var(--primary-button_background_hover);
+				border-color: var(--primary-button_border-color_hover);
+				color: var(--primary-button_color_hover);
+			}
+		}
+
+		&:active {
+			background: var(--primary-button_background_active);
+			border-color: var(--primary-button_border-color_active);
+			color: var(--primary-button_color_active);
 		}
 	}
 
-	&:active {
-		background: var(--primary-button_background_active);
-		border: var(--primary-button_border_active);
-		color: var(--primary-button_color_active);
-	}
-}
+	&:is([data-wf="destructive"]) {
+		background: var(--destructive-button_background);
+		border-color: var(--destructive-button_border-color);
+		color: var(--destructive-button_color);
 
-button[data-wf="destructive"] {
-	background: var(--desctructive-button_background);
-	border: var(--desctructive-button_border);
-	color: var(--desctructive-button_color);
+		@media (hover: hover) {
+			&:hover {
+				background: var(--destructive-button_background_hover);
+				border-color: var(--destructive-button_border-color_hover);
+				color: var(--destructive-button_color_hover);
+			}
+		}
 
-	@media (hover: hover) {
-		&:hover {
-			background: var(--destructive-button_background_hover);
-			border: var(--destructive-button_border_hover);
-			color: var(--destructive-button_color_hover);
+		&:active {
+			background: var(--destructive-button_background_active);
+			border-color: var(--destructive-button_border-color_active);
+			color: var(--destructive-button_color_active);
 		}
 	}
 
-	&:active {
-		background: var(--destructive-button_background_active);
-		border: var(--destructive-button_border_active);
-		color: var(--destructive-button_color_active);
-	}
-}
-
-button[data-wf="cancel"] {
-	background: var(--cancel-button_background);
-	border: var(--cancel-button_border);
-	color: var(--cancel-button_color);
-
-	@media (hover: hover) {
-		&:hover {
-			background: var(--cancel-button_background_hover);
-			border: var(--cancel-button_border_hover);
-			color: var(--cancel-button_color_hover);
-		}
-	}
-
-	&:active {
-		background: var(--cancel-button_background_active);
-		border: var(--cancel-button_border_active);
-		color: var(--cancel-button_color_active);
-	}
 }

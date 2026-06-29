@@ -2,19 +2,20 @@
 
 :is(input[type="checkbox"]):not([role="switch"]) {
 	appearance: none;
-	position: relative;
+
+	align-items: center;
+	color: transparent;
+	cursor: pointer;
 	display: inline-flex;
 	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	color: transparent;
+	position: relative;
 
-	block-size: var(--checkbox_block-size);
-	inline-size: var(--checkbox_block-size);
-	border: var(--checkbox_border-width) solid var(--checkbox_border-color);
-	border-radius: var(--checkbox_border-radius);
-	font: var(--checkbox_font);
 	background: var(--checkbox_background);
+	block-size: var(--checkbox_block-size);
+	border-radius: var(--checkbox_border-radius);
+	border: var(--checkbox_border-width) solid var(--checkbox_border-color);
+	font: var(--checkbox_font);
+	inline-size: var(--checkbox_block-size);
 	transition: all var(--transition-time);
 
 	&:before {
@@ -22,12 +23,12 @@
 	}
 
 	&:checked {
-		color: var(--checkbox_color_checked);
-		border-color: var(--checkbox_border-color_checked);
 		background: var(
 			--checkbox_background_checked,
 			var(--checkbox_background)
 		);
+		border-color: var(--checkbox_border-color_checked);
+		color: var(--checkbox_color_checked);
 	}
 
 	&:indeterminate::before {

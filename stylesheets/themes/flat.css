@@ -27,25 +27,25 @@
 	/* button */
 	--button_padding-block: 0.5rem;
 	--button_padding-inline: 1rem;
-	--button_border-radius: 4px;
-	--button_border-width: 1px;
+	--button_border-radius: calc(1lh + var(--button_padding-block));
+	--button_border-width: 0px;
 	--button_font: 100 0.9rem sans-serif;
 
-	--button_background: transparent;
-	--button_border-color: var(--color-wf);
+	--button_background: var(--color-inverted-wf);
+	--button_border-color: var(--color-inverted-wf);
 	--button_color: var(--color-wf);
 
-	--button_border-color_hover: var(--color-wf);
-	--button_background_hover: transparent;
+	--button_border-color_hover: var(--color-inverted-wf);
+	--button_background_hover: var(--color-inverted-wf);
 	--button_color_hover: var(--color-wf);
 
-	--button_border-color_active: var(--color-wf);
-	--button_background_active: transparent;
+	--button_border-color_active: var(--color-inverted-wf);
+	--button_background_active: var(--color-inverted-wf);
 	--button_color_active: var(--color-wf);
 
 	/* primary button */
-	--primary-button_border-color: var(--blue);
-	--primary-button_background: var(--blue);
+	--primary-button_border-color:var(--blue);
+	--primary-button_background:var(--blue);
 	--primary-button_color: var(--white);
 
 	--primary-button_border-color_hover: var(--blue);
@@ -57,17 +57,17 @@
 	--primary-button_color_active: var(--white);
 
 	/* desctructive button */
-	--destructive-button_background: var(--red);
-	--destructive-button_border-color: var(--red);
-	--destructive-button_color: var(--white);
+	--destructive-button_background: var(--color-inverted-wf);
+	--destructive-button_border-color: var(--color-inverted-wf);
+	--destructive-button_color: var(--red);
 
-	--destructive-button_background_hover: var(--red);
-	--destructive-button_border-color_hover: var(--red);
-	--destructive-button_color_hover: var(--white);
+	--destructive-button_background_hover: var(--color-inverted-wf);
+	--destructive-button_border-color_hover: var(--color-inverted-wf);
+	--destructive-button_color_hover: var(--red);
 
-	--destructive-button_background_active: var(--red);
-	--destructive-button_border-color_active: var(--red);
-	--destructive-button_color_active: var(--white);
+	--destructive-button_background_active: var(--color-inverted-wf);
+	--destructive-button_border-color_active: var(--color-inverted-wf);
+	--destructive-button_color_active: var(--red);
 
 	/* checkbox */
 	/* structure */
