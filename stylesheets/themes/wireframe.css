@@ -25,7 +25,7 @@
 	--opacity_disabled: 1;
 
 	/* button */
-	--button_padding-block: 0.5rem;
+	--button_padding-block: 0.25rem;
 	--button_padding-inline: 1rem;
 	--button_border-radius: 4px;
 	--button_border-width: 1px;
@@ -71,7 +71,7 @@
 
 	/* checkbox */
 	/* structure */
-	--checkbox_block-size: 1.5rem;
+	--checkbox_block-size: 1.25rem;
 	--checkbox_border-width: 1px;
 	--checkbox_border-radius: 0px;
 	--checkbox_font: 100 var(--checkbox_block-size) sans-serif;
@@ -86,13 +86,13 @@
 	--checkbox_content_checked: "\2715";
 
 	/* radio */
-	--radio_block-size: 1.5rem;
+	--radio_block-size: 1.25rem;
 	--radio_border-width: 1px;
 	--radio_background: transparent;
 	--radio_border-color: var(--color-wf);
 
 	/* radio island */
-	--radio-island_block-size: 0.75rem;
+	--radio-island_block-size: 0.5rem;
 	--radio-island_color: transparent;
 	--radio-island_border-color: transparent;
 	--radio-island_background: transparent;
