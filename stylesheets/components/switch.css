@@ -22,8 +22,6 @@
 		transition: all var(--transition-time);
 	}
 
-	/* needs border width could just use border width border color border: --border-width solid --border-color */
-
 	/* switch island */
 	&::after {
 		position: relative;
@@ -86,14 +84,3 @@
 		opacity: var(--opacity_disabled);
 	}
 }
-
-/* 
-
-margin-inline: calc(
-				(
-						(var(--switch_inline-size) * 0.5) -
-							var(--switch-island_inline-size_checked)
-					) *
-					0.5 - 2px
-			);
-*/
