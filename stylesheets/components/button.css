@@ -18,14 +18,16 @@
 	@media (hover: hover) {
 		&:hover {
 			background: var(--button_background_hover);
-			border: var(--button_border-width) solid var(--button_border-color_hover);
+			border: var(--button_border-width) solid
+				var(--button_border-color_hover);
 			color: var(--button_color_hover);
 		}
 	}
 
 	&:active {
 		background: var(--button_background_active);
-		border: var(--button_border-width) solid var(--button_border-color_active);
+		border: var(--button_border-width) solid
+			var(--button_border-color_active);
 		color: var(--button_color_active);
 	}
 
@@ -74,5 +76,4 @@
 			color: var(--destructive-button_color_active);
 		}
 	}
-
 }

@@ -44,8 +44,8 @@
 	--button_color_active: var(--color-wf);
 
 	/* primary button */
-	--primary-button_border-color:var(--blue);
-	--primary-button_background:var(--blue);
+	--primary-button_border-color: var(--blue);
+	--primary-button_background: var(--blue);
 	--primary-button_color: var(--white);
 
 	--primary-button_border-color_hover: var(--blue);
@@ -117,7 +117,6 @@
 	--switch-island_color_chekced: ;
 	--switch-island_border-color_checked: ;
 	--switch-island_background_checked: ; */
-
 
 	/* text (general keyboard input) */
 	/* --text-input_color: var(--color-wf);

@@ -73,51 +73,56 @@
 	/* structure */
 	--checkbox_block-size: 1.5rem;
 	--checkbox_border-width: 1px;
-	--checkbox_border-radius: 4px;
-	--checkbox_font: sans-serif;
+	--checkbox_border-radius: 0px;
+	--checkbox_font: 100 var(--checkbox_block-size) sans-serif;
 	--checkbox_content_checked: "\2714";
 	--checkbox_content_indeterminate: "\2014";
 	/* colors */
-	--checkbox_background: var(--color-inverted-wf);
-	--checkbox_background_checked: var(--color-wf);
+	--checkbox_background: transparent;
+	--checkbox_background_checked: transparent;
 	--checkbox_border-color: var(--color-wf);
-	--checkbox_border-color_checked: var(--color-inverted-wf);
-	--checkbox_color_checked: var(--color-inverted-wf);
+	--checkbox_border-color_checked: var(--color-wf);
+	--checkbox_color_checked: var(--color-wf);
+	--checkbox_content_checked: "\2715";
 
 	/* radio */
 	--radio_block-size: 1.5rem;
 	--radio_border-width: 1px;
-	--radio_background: var(--color);
-	--radio_border-color: blue;
+	--radio_background: transparent;
+	--radio_border-color: var(--color-wf);
 
 	/* radio island */
-	--radio-island_block-size: 1.5rem;
-	--radio-island_color: var(--color-inverted-wf);
-	--radio-island_border-color: var(--color-wf);
-	--radio-island_background: var(--color-wf);
+	--radio-island_block-size: 0.75rem;
+	--radio-island_color: transparent;
+	--radio-island_border-color: transparent;
+	--radio-island_background: transparent;
+
+	--radio-island_color_checked: var(--color-inverted-wf);
+	--radio-island_border-color_checked: var(--color-wf);
+	--radio-island_background_checked: var(--color-wf);
 
 	/* switch / toggle */
-	/* --switch_inline-size: ;
-	--switch_block-size: ;
-	--switch_border-raidus: ;
-	--switch_border-color: ;
-	--switch_border-width: ;
-	--switch_background: ;
-	--switch_border-color_checked: ;
-	--switch_border-width_checked: ;
-	--switch_background_checked: ; */
+	--switch_inline-size: 3rem;
+	--switch_block-size: 1.5rem;
+	--switch_border-raidus: 1.5rem;
+	--switch_border-color: var(--color-wf);
+	--switch_border-width: 1px;
+	--switch_background: transparent;
+	--switch_border-color_checked: var(--color-wf);
+	--switch_background_checked: transparent;
 
 	/* switch island */
-	/* --switch-island_inline-size: ;
-	--siwtch-island_block-size: ;
-	--switch-island_font: ;
-	--switch-island_border-width: ;
-	--switch-island_border-color: ;
-	--switch-island_background: ;
-	--switch-island_color_chekced: ;
-	--switch-island_border-color_checked: ;
-	--switch-island_background_checked: ; */
-
+	--switch-island_inline-size: 0.5rem;
+	--switch-island_block-size: 0.5rem;
+	--switch-island_border-width: 1px;
+	--switch-island_border-color: var(--color-wf);
+	--switch-island_background: transparent;
+	--switch-island_color_checked: var(--color-wf);
+	--switch-island_content_checked: "";
+	--switch-island_border-color_checked: var(--color-wf);
+	--switch-island_background_checked: transparent;
+	--switch-island_inline-size_checked: 1rem;
+	--switch-island_block-size_checked: 1rem;
 
 	/* text (general keyboard input) */
 	/* --text-input_color: var(--color-wf);
@@ -140,5 +145,6 @@
 	/* text disabled */
 	/* --text-input_background_disabled: ;
 	--text-input_border_disabled: ;
-	--text-input_opacity_disabled: ; */
+	--text-input_opacity_disabled: ;
+	*/
 }

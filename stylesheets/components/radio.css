@@ -8,10 +8,10 @@
 	opacity: 1;
 	position: relative;
 
-	border: var(--radio_border);
 	block-size: var(--radio_block-size);
 	inline-size: var(--radio_block-size);
 	background: var(--radio_background);
+	border: var(--radio_border-width) solid var(--radio_border-color);
 	transition: all var(--transition-time);
 
 	/* radio island */
