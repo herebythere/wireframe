@@ -121,8 +121,31 @@
 	--switch-island_content_checked: "";
 	--switch-island_border-color_checked: var(--color-wf);
 	--switch-island_background_checked: transparent;
-	--switch-island_inline-size_checked: 1rem;
-	--switch-island_block-size_checked: 1rem;
+	--switch-island_inline-size_checked: 0.8rem;
+	--switch-island_block-size_checked: 0.8rem;
+
+	/* range */
+	--range_block-size: 1rem;
+	--range_background: var(--color-inverted-wf);
+	--range_border-width: 1px;
+	--range_border-color: var(--color-wf);
+
+	/* range island */
+	--range-island_inline-size: 1rem;
+	--range-island_block-size: 2rem;
+	--range-island_background: var(--color-inverted-wf);
+	--range-island_border-width: 1px;
+	--range-island_border-color: var(--color-wf);
+
+	/* progress */
+	--progress_border-width: 1px;
+	--progress_border-color: var(--color-wf);
+	--progress_block-size: 1rem;
+	--progress_background: var(--color-inverted-wf);
+	--progress_border-radius: 1rem;
+
+	/* progress bar */
+	--progress-bar_background: var(--color-wf);
 
 	/* text (general keyboard input) */
 	/* --text-input_color: var(--color-wf);

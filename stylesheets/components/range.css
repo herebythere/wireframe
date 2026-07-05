@@ -1,0 +1,57 @@
+input[type="range"] {
+	appearance: none;
+	-webkit-appearance: none;
+	margin: 0;
+	cursor: pointer;
+
+	box-sizing: border-box;
+	background: var(--range_background);
+	border: var(--range_border-width) solid var(--range_border-color);
+	/* padding-block: calc(1rem - var(--range_border-width)); */
+	block-size: var(--range_block-size);
+	min-width: 200px;
+}
+
+input[type="range"]::-ms-track {
+	appearance: none;
+	-moz-appearance: none;
+
+	box-sizing: border-box;
+	background: var(--range_background);
+	width: 100%;
+	margin: 0;
+	border: var(--range_border-width) solid var(--range_border-color);
+	cursor: pointer;
+	block-size: var(--range_block-size);
+	padding: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	appearance: none;
+	-webkit-appearance: none;
+	position: relative;
+	cursor: pointer;
+	box-sizing: border-box;
+
+	border: var(--range-island_border-width) solid
+		var(--range-island_border-color);
+	border-radius: var(--range-island_border-radius);
+	block-size: var(--range-island_block-size);
+	inline-size: var(--range-island_inline-size);
+	background: var(--range-island_backround);
+}
+
+input[type="range"]::-moz-range-thumb {
+	appearance: none;
+	-moz-appearance: none;
+	position: relative;
+	cursor: pointer;
+	box-sizing: border-box;
+
+	border: var(--range-island_border-width) solid
+		var(--range-island_border-color);
+	border-radius: var(--range-island_border-radius);
+	block-size: var(--range-island_block-size);
+	inline-size: var(--range-island_inline-size);
+	background: var(--range-island_backround);
+}

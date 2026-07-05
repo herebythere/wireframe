@@ -15,9 +15,6 @@
 	padding-inline: var(--button_padding-inline);
 	transition: var(--transition-time);
 
-	outline: solid 1px transparent;
-	outline-offset: 4px;
-
 	@media (hover: hover) {
 		&:hover {
 			background: var(--button_background_hover);
@@ -31,8 +28,6 @@
 		background: var(--button_background);
 		border-color: var(--button_border-color);
 		color: var(--button_color);
-		/* outline: none; */
-		outline: solid 1px var(--blue);
 	}
 
 	&:active {
