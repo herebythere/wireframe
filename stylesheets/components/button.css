@@ -1,10 +1,11 @@
 /* https://developer.apple.com/design/human-interface-guidelines/buttons */
 
 :is(button) {
-	appearance: none;
+	/* appearance: none; */
 	cursor: pointer;
 	display: inline-flex;
-	position: relative;
+
+	/* position: relative; */
 
 	background: var(--button_background);
 	border-radius: var(--button_border-radius);
@@ -43,7 +44,15 @@
 		opacity: var(--opacity_disabled);
 	}
 
-	&:is([data-wf="primary"]) {
+	&:is([data-wf="icon-button"], [data-wf="primary-icon-button"], [data-wf="destructive-icon-button"]) {
+		justify-content: center;
+		align-items: center;
+		padding: var(--icon-button_padding-block);
+		min-block-size: var(--icon-button_block-size);
+		min-inline-size: var(--icon-button_block-size);
+	}
+
+	&:is([data-wf="primary-button"], [data-wf="primary-icon-button"]) {
 		background: var(--primary-button_background);
 		border-color: var(--primary-button_border-color);
 		color: var(--primary-button_color);
@@ -63,7 +72,7 @@
 		}
 	}
 
-	&:is([data-wf="destructive"]) {
+	&:is([data-wf="destructive-button"], [data-wf="destructive-icon-button"]) {
 		background: var(--destructive-button_background);
 		border-color: var(--destructive-button_border-color);
 		color: var(--destructive-button_color);

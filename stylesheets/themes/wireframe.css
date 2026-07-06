@@ -43,6 +43,10 @@
 	--button_background_active: transparent;
 	--button_color_active: var(--color-wf);
 
+	/* icon button */
+	--icon-button_block-size: 2rem;
+	--icon-button_padding-block: 0.25rem;
+
 	/* primary button */
 	--primary-button_border-color: var(--blue);
 	--primary-button_background: var(--blue);
