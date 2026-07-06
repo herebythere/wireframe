@@ -4,17 +4,22 @@ input[type="range"] {
 	margin: 0;
 	cursor: pointer;
 
-	box-sizing: border-box;
-	background: var(--range_background);
-	border: var(--range_border-width) solid var(--range_border-color);
-	/* padding-block: calc(1rem - var(--range_border-width)); */
+	display: inline-flex;
+	overflow: visible;
+
+	background: transparent;
+	/* border: var(--range_border-width) solid var(--range_border-color); */
+
+	align-items: center;
 	block-size: var(--range_block-size);
 	min-width: 200px;
 }
 
-input[type="range"]::-ms-track {
-	appearance: none;
+input[type="range"]::-moz-range-track {
 	-moz-appearance: none;
+	appearance: none;
+
+	display: inline-flex;
 
 	box-sizing: border-box;
 	background: var(--range_background);
@@ -26,15 +31,34 @@ input[type="range"]::-ms-track {
 	padding: 0;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-	appearance: none;
+input[type="range"]::-webkit-slider-runnable-track {
 	-webkit-appearance: none;
-	position: relative;
-	cursor: pointer;
+	appearance: none;
+
+	inline-size: 100%;
+	block-size: var(--range_block-size);
 	box-sizing: border-box;
 
-	border: var(--range-island_border-width) solid
+	border: var(--range_border-width) solid var(--range_border-color);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	position: relative;
+	cursor: pointer;
+
+	margin-block-start: calc(
+		var(--range_block-size) * -0.5 - var(--range-island_border-width)
+	);
+	box-sizing: border-box;
+	/* border: var(--range-island_border-width) solid
+		var(--range-island_border-color); */
+
+	/* Use outline instead of border in safari to avoid the overflow */
+	outline: var(--range-island_border-width) solid
 		var(--range-island_border-color);
+
 	border-radius: var(--range-island_border-radius);
 	block-size: var(--range-island_block-size);
 	inline-size: var(--range-island_inline-size);
@@ -42,11 +66,10 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-moz-range-thumb {
-	appearance: none;
 	-moz-appearance: none;
+	appearance: none;
 	position: relative;
 	cursor: pointer;
-	box-sizing: border-box;
 
 	border: var(--range-island_border-width) solid
 		var(--range-island_border-color);

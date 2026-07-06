@@ -44,7 +44,11 @@
 		opacity: var(--opacity_disabled);
 	}
 
-	&:is([data-wf="icon-button"], [data-wf="primary-icon-button"], [data-wf="destructive-icon-button"]) {
+	&:is(
+		[data-wf="icon-button"],
+		[data-wf="primary-icon-button"],
+		[data-wf="destructive-icon-button"]
+	) {
 		justify-content: center;
 		align-items: center;
 		padding: var(--icon-button_padding-block);

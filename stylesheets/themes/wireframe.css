@@ -135,7 +135,7 @@
 	--range_border-color: var(--color-wf);
 
 	/* range island */
-	--range-island_inline-size: 1rem;
+	--range-island_inline-size: 1.1rem;
 	--range-island_block-size: 2rem;
 	--range-island_background: var(--color-inverted-wf);
 	--range-island_border-width: 1px;
