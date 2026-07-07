@@ -27,7 +27,7 @@
 	/* button */
 	--button_padding-block: 0.25rem;
 	--button_padding-inline: 1rem;
-	--button_border-radius: 4px;
+	--button_border-radius: 1.25rem;
 	--button_border-width: 1px;
 	--button_font: 100 0.9rem sans-serif;
 
@@ -45,6 +45,7 @@
 
 	/* icon button */
 	--icon-button_block-size: 2rem;
+	--icon-button_border-radius: 4px;
 	--icon-button_padding-block: 0.25rem;
 
 	/* primary button */
@@ -152,22 +153,24 @@
 	--progress-bar_background: var(--color-wf);
 
 	/* text (general keyboard input) */
-	/* --text-input_color: var(--color-wf);
+	--text-input_color: var(--color-wf);
 	--text-input_font: var(--font-family-wf);
 	--text-input_background: none;
-	--text-input_border: 1px solid var(--color-wf);
-	--text-input_border-radius: 0;
-	--text-input_border-block-start: ;
+	--text-input_border-width: 1px;
+	--text-input_border-color: var(--color-wf);
+
+	--text-input_border-radius: 4px;
+	/* --text-input_border-block-start: ;
 	--text-input_border-block-end: ;
 	--text-input_border-inlne-start: ;
 	--text-input_border-inlne-end: ;
 	--text-input_border-start-start-radius: ;
 	--text-input_border-start-end-radius: ;
 	--text-input_border-end-start-radius: ;
-	--text-input_border-end-end-radius: ;
+	--text-input_border-end-end-radius: ; */
 
-	--text-input_padding-inline: ;
-	--text-input_padding-block: ; */
+	--text-input_padding-inline: 1rem;
+	--text-input_padding-block: 0.5rem;
 
 	/* text disabled */
 	/* --text-input_background_disabled: ;

@@ -51,6 +51,7 @@
 	) {
 		justify-content: center;
 		align-items: center;
+		border-radius: var(--icon-button_border-radius);
 		padding: var(--icon-button_padding-block);
 		min-block-size: var(--icon-button_block-size);
 		min-inline-size: var(--icon-button_block-size);

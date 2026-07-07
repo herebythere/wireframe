@@ -1,5 +1,11 @@
 /* places for fonts and line heights */
 :is(
+	input:not(
+		[type="checkbox"],
+		[type="radio"],
+		[type="range"],
+		[input="color"]
+	),
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
@@ -7,12 +13,11 @@
 ) {
 	appearance: none;
 	position: relative;
-	display: inline-flex;
-	cursor: initial;
+	display: inline;
 
 	transition: all var(--transition-time);
 
-	border: var(--text-input_border);
+	border: var(--text-input_border-width) solid var(--text-input_border-color);
 	border-radius: var(--text-input_border-radius);
 	font: var(--text-input_font);
 	color: var(--text-input_color);
@@ -21,7 +26,7 @@
 
 	cursor: pointer;
 
-	border-block-end: var(--text-input_border-block-end);
+	/* border-block-end: var(--text-input_border-block-end); */
 	padding-inline: var(--text-input_padding-inline);
 	padding-block: var(--text-input_padding-block);
 
@@ -30,6 +35,9 @@
 
 	&:focus {
 		outline: none;
+
+		border: var(--text-input_border-width) solid
+			var(--text-input_border-color);
 		cursor: initial;
 	}
 
