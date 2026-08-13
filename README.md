@@ -14,13 +14,14 @@ All components are RTL (right-to-left) compatible.
 
 ## For designers
 
-`Wireframe` is named after the process of drafting lo-fi user interfaces with pen and paper. It's also a reference to the polygon meshes found in graphics programming.
+`Wireframe` is named after the technique of drafting low-fidelity interfaces with pen and paper.
+It's also a reference to the polygon meshes found in graphics programming.
 
 `Wireframe` is an aesthetically concise UI language. Components must differentiate themselves
 from text and each other. Their functionality is telegraphed by their visual accent.
 
-Creature comforts like shadows, gradients, and expanding circles ultimately are designed for
-other designers (and promotions). They do nothing of signifigance for the user.
+I believe creature comforts like expanding circles are ultimately designed for other designers
+(and consequentially job security). They do nothing of signifigance for the user.
 
 Consider `wireframe` a love letter to my former colleagues at Material Design.
 
@@ -51,6 +52,25 @@ A single css stylesheet includes the following components:
     - url
 
 - :focus ring
+
+Components not immediately defined by elements are defined by there role:
+```css
+input[type=checkbox][role=switch]
+[tabindex=0]
+```
+
+Components not defined by an element or a role are defined by a `data-wf` attribute.
+
+```html
+<li data-wf="icon-button"></li>
+```
+
+Lastly outline is a special case.
+
+```html
+<li data-wf-outline></li>
+```
+
 
 ## Web components
 

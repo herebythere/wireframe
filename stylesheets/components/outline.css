@@ -1,6 +1,6 @@
 /* MAYBE */
 
-.outline {
+:is([data-wf-outline], [tabindex], :not([tabindex="-1"])) {
 	outline: var(--outline);
 	outline-offset: var(--outline-offset);
 

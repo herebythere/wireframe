@@ -1,11 +1,8 @@
 /* https://developer.apple.com/design/human-interface-guidelines/buttons */
 
 :is(button) {
-	/* appearance: none; */
 	cursor: pointer;
 	display: inline-flex;
-
-	/* position: relative; */
 
 	background: var(--button_background);
 	border-radius: var(--button_border-radius);
