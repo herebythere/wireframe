@@ -44,3 +44,8 @@
 	padding-block-start: calc((1lh - 1cap) * 0.5);
 	margin-block-end: calc((1lh - 1cap) * -0.5);
 }
+
+[data-wf-variant="baseline"] {
+	padding-block-start: calc((1lh - 1cap) * 0.5);
+	margin-block-end: calc((1lh - 1cap) * -0.5);
+}
