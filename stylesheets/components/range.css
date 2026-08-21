@@ -14,7 +14,7 @@
 
 		background: var(--range_background);
 		background: lightblue;
-		
+
 		block-size: var(--range_block-size);
 		inline-size: var(--range_inline-size);
 
@@ -24,11 +24,10 @@
 		-webkit-appearance: none;
 		appearance: none;
 
-	background: var(--range_background);
-	background: lightblue;
+		background: var(--range_background);
+		background: lightblue;
 		block-size: var(--range_block-size);
 		inline-size: var(--range_inline-size);
-
 	}
 
 	&::-moz-range-thumb {
@@ -41,7 +40,6 @@
 		block-size: var(--range-island_block-size);
 		inline-size: var(--range-island_inline-size);
 		border: var(--range-island_border-width) solid var(--range-island_border-color);
-		
 	}
 
 	&::-webkit-slider-thumb {
@@ -50,7 +48,7 @@
 
 		/* is display block */
 		margin-block-start: calc((-0.5 * ((var(--range-island_block-size) - var(--range_block-size))) - (var(--range-island_border-width))));
-		
+
 		box-sizing: content-box;
 		background: darkgreen;
 		block-size: var(--range-island_block-size);

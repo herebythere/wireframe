@@ -133,9 +133,6 @@
 	--range_block-size: 0.5rem;
 	--range_inline-size: 128px;
 	--range_background: var(--color-inverted-wf);
-	--range_border-width: 1px;
-	--range_border-color: var(--color-wf);
-
 
 	/* range island */
 	--range-island_inline-size: 1rem;
