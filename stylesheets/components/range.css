@@ -1,89 +1,60 @@
-input[type="range"] {
-	appearance: none;
+:is(input[type="range"]) {
 	-webkit-appearance: none;
-	margin: 0;
-	cursor: pointer;
-
-	display: inline-flex;
-	overflow: visible;
-
-	background: transparent;
-	/* border: var(--range_border-width) solid var(--range_border-color); */
-
-	align-items: center;
-	block-size: var(--range_block-size);
-	min-width: 200px;
-}
-
-input[type="range"]::-moz-range-track {
-	-moz-appearance: none;
 	appearance: none;
-
-	display: inline-flex;
-
-	box-sizing: border-box;
-	background: var(--range_background);
-	width: 100%;
 	margin: 0;
-	border: var(--range_border-width) solid var(--range_border-color);
-	cursor: pointer;
-	block-size: var(--range_block-size);
 	padding: 0;
-}
-
-input[type="range"]::-webkit-media-slider-thumb {
-	appearance: none;
-	background: black;
-	block-size: 1rem;
-}
-
-::-moz-range-progress {
-}
-
-input[type="range"]::-webkit-slider-runnable-track {
-	-webkit-appearance: none;
-	appearance: none;
-
-	inline-size: 100%;
+	cursor: pointer;
 	block-size: var(--range_block-size);
-	box-sizing: border-box;
+	inline-size: var(--range_inline-size);
 
-	border: var(--range_border-width) solid var(--range_border-color);
-}
 
-input[type="range"]::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	appearance: none;
-	position: relative;
-	cursor: pointer;
+	&::-moz-range-track {
+		-webkit-appearance: none;
+		appearance: none;
 
-	margin-block-start: calc(
-		var(--range_block-size) * -0.5 - var(--range-island_border-width)
-	);
-	box-sizing: border-box;
-	/* border: var(--range-island_border-width) solid
-		var(--range-island_border-color); */
+		background: var(--range_background);
+		background: lightblue;
+		
+		block-size: var(--range_block-size);
+		inline-size: var(--range_inline-size);
 
-	/* Use outline instead of border in safari to avoid the overflow */
-	outline: var(--range-island_border-width) solid
-		var(--range-island_border-color);
+	}
 
-	border-radius: var(--range-island_border-radius);
-	block-size: var(--range-island_block-size);
-	inline-size: var(--range-island_inline-size);
-	background: var(--range-island_backround);
-}
+	&::-webkit-slider-runnable-track {
+		-webkit-appearance: none;
+		appearance: none;
 
-input[type="range"]::-moz-range-thumb {
-	-moz-appearance: none;
-	appearance: none;
-	position: relative;
-	cursor: pointer;
+	background: var(--range_background);
+	background: lightblue;
+		block-size: var(--range_block-size);
+		inline-size: var(--range_inline-size);
 
-	border: var(--range-island_border-width) solid
-		var(--range-island_border-color);
-	border-radius: var(--range-island_border-radius);
-	block-size: var(--range-island_block-size);
-	inline-size: var(--range-island_inline-size);
-	background: var(--range-island_backround);
+	}
+
+	&::-moz-range-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		display: inline-flex;
+
+		box-sizing: border-box;
+		background: darkgreen;
+		block-size: var(--range-island_block-size);
+		inline-size: var(--range-island_inline-size);
+		border: var(--range-island_border-width) solid var(--range-island_border-color);
+		
+	}
+
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+
+		/* is display block */
+		margin-block-start: calc((-0.5 * ((var(--range-island_block-size) - var(--range_block-size))) - (var(--range-island_border-width))));
+		
+		box-sizing: content-box;
+		background: darkgreen;
+		block-size: var(--range-island_block-size);
+		inline-size: var(--range-island_inline-size);
+		border: var(--range-island_border-width) solid var(--range-island_border-color);
+	}
 }

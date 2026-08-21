@@ -22,6 +22,7 @@ Stuff that might need a webcomponent
 - radio like selection
 	- could represent a tabs
 	- could use a form value maybe?
+- slider
 
 Designs that fucking suck:
 
