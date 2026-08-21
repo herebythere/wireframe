@@ -1,78 +1,96 @@
 /* https://developer.apple.com/design/human-interface-guidelines/buttons */
 
-:is(button[data-wf], button[wf], input[type=button][data-wf], input[type=button][wf]) {
-	appearance: none;
+:is(button) {
 	cursor: pointer;
 	display: inline-flex;
-	position: relative;
 
 	background: var(--button_background);
 	border-radius: var(--button_border-radius);
-	border: var(--button_border);
+	border: var(--button_border-width) solid var(--button_border-color);
 	color: var(--button_color);
 	font: var(--button_font);
 	padding-block: var(--button_padding-block);
 	padding-inline: var(--button_padding-inline);
-	transition: var(--button_transition-time);
+	transition: var(--transition-time);
 
 	@media (hover: hover) {
 		&:hover {
-			background: var(--button_background_hover, var(--button_background));
-			border: var(--button_border_hover, var(--button_border));
-			color: var(--button_color_hover, var(--button_color));
+			background: var(--button_background_hover);
+			border: var(--button_border-width) solid
+				var(--button_border-color_hover);
+			color: var(--button_color_hover);
 		}
 	}
 
+	&:focus {
+		background: var(--button_background);
+		border-color: var(--button_border-color);
+		color: var(--button_color);
+	}
+
 	&:active {
-		background: var(--button_background_active, var(--button_background));
-		border: var(--button_border_active, var(--button_border));
-		color: var(--button_color_active, var(--button_color));
+		background: var(--button_background_active);
+		border: var(--button_border-width) solid
+			var(--button_border-color_active);
+		color: var(--button_color_active);
 	}
 
 	&:disabled {
 		cursor: not-allowed;
 
-		background: var(--button_background_disabled, var(--button_background));
-		border: var(--button_border_disabled, var(--button_border));
-		color: var(--button_color_disabled, var(--button_color));
-		opacity: var(--button_opacity_disabled);
+		opacity: var(--opacity_disabled);
+	}
+
+	&:is(
+		[data-wf="icon-button"],
+		[data-wf="primary-icon-button"],
+		[data-wf="destructive-icon-button"]
+	) {
+		justify-content: center;
+		align-items: center;
+		border-radius: var(--icon-button_border-radius);
+		padding: var(--icon-button_padding-block);
+		min-block-size: var(--icon-button_block-size);
+		min-inline-size: var(--icon-button_block-size);
+	}
+
+	&:is([data-wf="primary-button"], [data-wf="primary-icon-button"]) {
+		background: var(--primary-button_background);
+		border-color: var(--primary-button_border-color);
+		color: var(--primary-button_color);
+
+		@media (hover: hover) {
+			&:hover {
+				background: var(--primary-button_background_hover);
+				border-color: var(--primary-button_border-color_hover);
+				color: var(--primary-button_color_hover);
+			}
+		}
+
+		&:active {
+			background: var(--primary-button_background_active);
+			border-color: var(--primary-button_border-color_active);
+			color: var(--primary-button_color_active);
+		}
+	}
+
+	&:is([data-wf="destructive-button"], [data-wf="destructive-icon-button"]) {
+		background: var(--destructive-button_background);
+		border-color: var(--destructive-button_border-color);
+		color: var(--destructive-button_color);
+
+		@media (hover: hover) {
+			&:hover {
+				background: var(--destructive-button_background_hover);
+				border-color: var(--destructive-button_border-color_hover);
+				color: var(--destructive-button_color_hover);
+			}
+		}
+
+		&:active {
+			background: var(--destructive-button_background_active);
+			border-color: var(--destructive-button_border-color_active);
+			color: var(--destructive-button_color_active);
+		}
 	}
 }
-
-/* all of these should fallback to button stuffs */
-button[data-wf=primary],
-input[type=button][data-wf=primary] {
-	background: var(--primary-button_background);
-	border: var(--primary-button_border);
-	color: var(--primary-button_color);
-
-	/* hover */
-	/* active */
-	/* disabled */
-}
-
-button[data-wf=destructive],
-input[type=button][data-wf=destructive] {
-	background: var(--desctructive-button_background);
-	border: var(--desctructive-button_border);
-	color: var(--desctructive-button_color);
-
-	/* hover */
-	/* active */
-	/* disabled */
-}
-
-button[data-wf=cancel],
-input[type=button][data-wf=cancel] {
-	background: var(--cancel-button_background);
-	border: var(--cancel-button_border);
-	color: var(--cancel-button_color);
-
-	/* hover */
-	/* active */
-	/* disabled */
-}
-
-/* system button primary */
-/* system button destructive */
-/* system button cancel */

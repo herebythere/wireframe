@@ -1,4 +1,4 @@
-:is(input[type=checkbox][role=switch]) {
+:is(input[type="checkbox"][role="switch"]) {
 	appearance: none;
 	position: relative;
 	display: inline-flex;
@@ -11,32 +11,37 @@
 	inline-size: var(--switch_inline-size);
 	block-size: var(--switch_block-size);
 	border-radius: var(--switch_border-radius);
-	border: var(--switch_border);
+	border: var(--switch_border-width) solid var(--switch_border-color);
 	background: var(--switch_background);
 
 	transition: all var(--transition-time);
 
 	&::before {
 		position: relative;
-		content: '';
+		content: "";
 		transition: all var(--transition-time);
 	}
 
 	/* switch island */
 	&::after {
 		position: relative;
-		content: '';
+		content: "";
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		inline-size: 0.5rem;
-		block-size: 0.5rem;
-		border-radius: 0.5rem;
-		margin-inline: calc(((var(--switch_inline-size) * 0.5) - var(--switch-island_inline-size)) * 0.5 - 2px);
+
+		margin-inline: calc(
+			(
+					(var(--switch_inline-size) * 0.5) -
+						var(--switch-island_inline-size)
+				) *
+				0.5 - (var(--switch-island_border-width) * 2)
+		);
 
 		font: var(--switch-island_font);
 		border-radius: var(--switch-island_border-radius);
-		border: var(--switch-island_border);
+		border: var(--switch-island_border-width) solid
+			var(--switch-island_border-color);
 		background: var(--switch-island_background);
 		inline-size: var(--switch-island_inline-size);
 		block-size: var(--switch-island_block-size);
@@ -45,8 +50,9 @@
 	}
 
 	&:checked {
-		border: var(--switch_border_checked, var(--switch_border));
-		background: var(--switch_background_checked, var(--switch_background));
+		border: var(--switch_border-width) solid
+			var(--switch_border-color_checked);
+		background: var(--switch_background_checked);
 
 		&::before {
 			flex-grow: 1;
@@ -55,25 +61,26 @@
 		&::after {
 			content: var(--switch-island_content_checked);
 
-			margin-inline: calc(((var(--switch_inline-size) * 0.5) - var(--switch-island_inline-size_checked)) * 0.5 - 2px);
-			color: var(--switch-island_color_checked, var(--switch-island_color));
-			inline-size: var(--switch-island_inline-size_checked, var(--switch-island_inline-size));
-			block-size: var(--switch-island_block-size_checked, var(--switch-island_block-size));
-			border: var(--switch-island_border_checked, var(--switch-island_border));
-			background: var(--switch-island_background_checked, var(--switch-island_background));
+			color: var(--switch-island_color_checked);
+			inline-size: var(--switch-island_inline-size_checked);
+			block-size: var(--switch-island_block-size_checked);
+			border: var(--switch-island_border-width) solid
+				var(--switch-island_border-color_checked);
+			background: var(--switch-island_background_checked);
+
+			margin-inline: calc(
+				(
+						(var(--switch_inline-size) * 0.5) -
+							var(--switch-island_inline-size_checked)
+					) *
+					0.5 - (var(--switch-island_border-width) * 2)
+			);
 		}
 	}
 
 	&:disabled {
 		cursor: not-allowed;
 
-		background: var(--switch_background_disabled);
-		border: var(--switch_border_disabled);
-		opacity: var(--switch_opacity_disabled);
-
-		&::after {
-			border: var(--switch-island_border_disabled, var(--switch-island_border));
-			background: var(--switch-island_background_disabled, var(--switch-island_background));
-		}
+		opacity: var(--opacity_disabled);
 	}
 }

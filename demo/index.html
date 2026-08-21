@@ -2,35 +2,58 @@
 <html>
 
 <head>
-	<link href="../stylesheets/themes/95.css" rel="stylesheet">
-	</link>
 	<link href="../dist/wireframe.css" rel="stylesheet">
-	</link>
-	<link href="./demo.css" rel="stylesheet">
-	</link>
+	<link href="../stylesheets/themes/wireframe.css" rel="stylesheet">
+	<link href="./styles/demo.css" rel="stylesheet">
 
-	<script type="module" src="./scripts/components.js">
-	</script>
+	<script type="module" src="./scripts/components.js"></script>
 </head>
 
 <body>
+	<header data-grid-name="hd">
+		<h1>Wireframe</h1>
+		<p>A project from <a href="https://herebythere.com/">Here By There</a></p>
+	</header>
 	<main>
-		<section>
-			<p>button</p>
-			<p>primary button</p>
-			<p>destructive button</p>
-			<p>cancel button</p>
-			<p>checkbox</p>
-			<p>chip</p>
-			<p>radio</p>
-			<p>switch</p>
-			<p>range</p>
-			<p>progress</p>
-			<p>text inputs</p>
-			<p>digit inputs</p>
-			<p>textarea</p>
+		<section data-grid-name="ls">
+			<h1>About</h1>
+			<ul>
+				<li>Preface</li>
+				<li>Building for the web</li>
+				<li>How to</li>
+			</ul>
+			<h1>Css Components</h1>
+			<ul>
+				<li>Button</li>
+				<li>Checkbox</li>
+				<li>Radio</li>
+				<li>Switch</li>
+				<li>Range</li>
+				<li>Progress</li>
+				<li>Text inputs</li>
+				<li>Digit inputs</li>
+				<li>Textarea</li>
+				<li>Color swatch</li>
+			</ul>
+			<h1>Web Components</h1>
+			<ul>
+				<li>Toolbar</li>
+				<li>Grid</li>
+				<li>Chip</li>
+				<li>Chip</li>
+			</ul>
+		</section>
+		<section data-grid-name="cpmt">
+			<section>
+				<p>color</p>
+				<input type="color">
+
+			</section>
 		</section>
 	</main>
+	<footer data-grid-name="ftr">
+		Hello a footer!
+	</footer>
 </body>
 
 </html>

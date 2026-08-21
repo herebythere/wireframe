@@ -1,0 +1,30 @@
+:is(input[type="color"]) {
+	cursor: pointer;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+
+	border: var(--color_border-width) solid var(--color_border-color);
+	border-radius: var(--color_border-radius);
+	inline-size: var(--color_inline-size);
+	block-size: var(--color_block-size);
+
+	&::-moz-color-swatch {
+		border: none;
+	}
+
+	&::-webkit-color-swatch {
+		inline-size: 100%;
+		block-size: 100%;
+	}
+
+	&::-webkit-color-swatch-wrapper {
+		padding: 0;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+
+		opacity: var(--opacity_disabled, 1);
+	}
+}

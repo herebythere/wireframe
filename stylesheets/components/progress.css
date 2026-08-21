@@ -1,25 +1,25 @@
 progress {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: none;
-  background: none;
-  border: 2px solid var(--color-wf);
-  height: var(--line-height);
-  margin: 0;
-  overflow: hidden;
-  border-radius: var(--progress_border-radius);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	border: var(--progress_border-width) solid var(--progress_border-color);
+	block-size: var(--progress_block-size);
+	margin: 0;
+	overflow: hidden;
+	background: var(--progress_background);
+	border-radius: var(--progress_border-radius);
 }
 
 progress::-moz-progress-bar {
-  background: #efefef;
+	background: var(--progress-bar_background);
 }
 
 progress::-webkit-progress-bar {
-  background: none;
-  overflow: hidden;
+	background: var(--progress_background);
+	overflow: hidden;
 }
 
 progress::-webkit-progress-value {
-  background: #efefef;
+	background: var(--progress-bar_background);
 }

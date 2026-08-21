@@ -3,32 +3,32 @@
 	color: var(--color);
 }
 
-h1 {
+[data-wf="h1"] {
 	font: var(--h1_font);
 	color: var(--h1_color);
 }
 
-h2 {
+[data-wf="h2"] {
 	font: var(--h2_font);
 	color: var(--h2_color);
 }
 
-h3 {
+[data-wf="h3"] {
 	font: var(--h3_font);
 	color: var(--h3_color);
 }
 
-h4 {
+[data-wf="h4"] {
 	font: var(--h4_font);
 	color: var(--h4_color);
 }
 
-h5 {
+[data-wf="h5"] {
 	font: var(--h5_font);
 	color: var(--h5_color);
 }
 
-h6 {
+[data-wf="h6"] {
 	font: var(--h6_font);
 	color: var(--h6_color);
 }
