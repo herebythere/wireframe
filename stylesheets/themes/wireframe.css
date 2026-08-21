@@ -141,6 +141,13 @@
 	--range-island_border-width: 1px;
 	--range-island_border-color: var(--color-wf);
 
+	/* color element */
+	--color_border-radius: 4px;
+	--color_border-width: 1px;
+	--color_border-color: var(--color-inverted-wf);
+	--color_block-size: 36px;
+	--color_inline-size: 36px;
+
 	/* progress */
 	--progress_border-width: 1px;
 	--progress_border-color: var(--color-wf);

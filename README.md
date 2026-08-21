@@ -54,6 +54,7 @@ A single css stylesheet includes the following components:
 - :focus ring
 
 Components not immediately defined by elements are defined by there role:
+
 ```css
 input[type=checkbox][role=switch]
 [tabindex=0]
@@ -70,7 +71,6 @@ Lastly outline is a special case.
 ```html
 <li data-wf-outline></li>
 ```
-
 
 ## Web components
 

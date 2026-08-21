@@ -14,7 +14,7 @@ h1 {
 body {
 	display: grid;
 	grid-template-columns: min-content 1fr 1fr;
-	grid-template-areas: 
+	grid-template-areas:
 		"hd  main"
 		"hd  main"
 		"hd  main"
@@ -36,8 +36,7 @@ body {
 
 main {
 	display: grid;
-	grid-template-areas: 
-		"ls  cmpt";
+	grid-template-areas: "ls  cmpt";
 }
 
 [data-grid-name="ls"] {

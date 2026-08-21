@@ -1,38 +1,25 @@
-/* border width and border color is separate */
-
 :is(input[type="color"]) {
-	appearance: none;
-
-	align-items: center;
-	color: transparent;
 	cursor: pointer;
-	display: inline-flex;
-	justify-content: center;
-	position: relative;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
 
-	background: var(--checkbox_background);
-	block-size: var(--checkbox_block-size);
-	border-radius: var(--checkbox_border-radius);
-	border: var(--checkbox_border-width) solid var(--checkbox_border-color);
-	font: var(--checkbox_font);
-	inline-size: var(--checkbox_block-size);
-	transition: all var(--transition-time);
+	border: var(--color_border-width) solid var(--color_border-color);
+	border-radius: var(--color_border-radius);
+	inline-size: var(--color_inline-size);
+	block-size: var(--color_block-size);
 
-	&:before {
-		content: var(--checkbox_content_checked, "\2714");
+	&::-moz-color-swatch {
+		border: none;
 	}
 
-	&:checked {
-		background: var(
-			--checkbox_background_checked,
-			var(--checkbox_background)
-		);
-		border-color: var(--checkbox_border-color_checked);
-		color: var(--checkbox_color_checked);
+	&::-webkit-color-swatch {
+		inline-size: 100%;
+		block-size: 100%;
 	}
 
-	&:indeterminate::before {
-		content: var(--checkbox_content_indeterminate, "\2014");
+	&::-webkit-color-swatch-wrapper {
+		padding: 0;
 	}
 
 	&:disabled {
